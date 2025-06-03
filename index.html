@@ -3,38 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mohammed Faihan | Maker & Designer</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2a2a72;
+            --secondary: #009ffd;
+            --accent: #ffa400;
+            --light: #e6e6e6;
+            --dark: #232528;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="white" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+            opacity: 0.1;
+            animation: rotate 60s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-pill {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(5px);
+            transform: scale(0.8);
+            opacity: 0;
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Navigation links -->
-        </nav>
-    </header>
-    
-    <main>
-        <section id="hero">
-            <!-- Introduction section -->
-        </section>
-        
-        <section id="about">
-            <!-- About you -->
-        </section>
-        
-        <section id="projects">
-            <!-- Your work showcase -->
-        </section>
-        
-        <section id="contact">
-            <!-- Contact form/info -->
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Footer content -->
-    </footer>
-    
-    <script src="script.js"></script>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mohammed Faihan</h1>
+            <p class="tagline">Electronics Enthusiast • Robotics Maker • 3D Designer</p>
+            
+            <div class="skills-container">
+                <div class="skill-pill" style="animation-delay: 0.1s">Electronics</div>
+                <div class="skill-pill" style="animation-delay: 0.2s">Robotics</div>
+                <div class="skill-pill" style="animation-delay: 0.3s">Making</div>
+                <div class="skill-pill" style="animation-delay: 0.4s">Graphic Design</div>
+                <div class="skill-pill" style="animation-delay: 0.5s">CAD Design</div>
+                <div class="skill-pill" style="animation-delay: 0.6s">3D Printing</div>
+                <div class="skill-pill" style="animation-delay: 0.7s">3D Rendering</div>
+                <div class="skill-pill" style="animation-delay: 0.8s">Product Animation</div>
+            </div>
+            
+            <a href="#projects" class="cta-button">View My Projects</a>
+        </div>
+    </section>
+
+    <script>
+        // Simple JavaScript to handle scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // This would be expanded with Intersection Observer for other sections
+            console.log('Portfolio loaded!');
+            
+            // You can add more interactive elements here
+            const skills = document.querySelectorAll('.skill-pill');
+            skills.forEach(skill => {
+                skill.addEventListener('mouseover', () => {
+                    skill.style.transform = 'scale(1.1)';
+                    skill.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                });
+                skill.addEventListener('mouseout', () => {
+                    skill.style.transform = 'scale(1)';
+                    skill.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
