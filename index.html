@@ -3,188 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Faihan | Maker & Designer</title>
-    <style>
-        /* CSS Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #2a2a72;
-            --secondary: #009ffd;
-            --accent: #ffa400;
-            --light: #e6e6e6;
-            --dark: #232528;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            overflow-x: hidden;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 300%;
-            height: 300%;
-            top: -100%;
-            left: -100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="white" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
-            opacity: 0.1;
-            animation: rotate 60s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.3s forwards;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.6s forwards;
-        }
-        
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .skill-pill {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
-            backdrop-filter: blur(5px);
-            transform: scale(0.8);
-            opacity: 0;
-            animation: fadeInScale 0.8s ease-out forwards;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--dark);
-            padding: 0.8rem 2rem;
-            border-radius: 2rem;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 2rem;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.9s forwards;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInScale {
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <title>Mohammed Faihan | Multidisciplinary Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Electronics</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <div class="dropdown-icon">⚡</div>
+                        <h3 class="dropdown-title">Tech Portfolio</h3>
+                    </div>
+                    <p class="dropdown-text">My robotics, electronics, and maker projects showcasing hardware and embedded systems work.</p>
+                    <div class="dropdown-image">
+                        <!-- Replace with your actual image -->
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Electronics Projects">
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Photo/Video</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <div class="dropdown-icon">📷</div>
+                        <h3 class="dropdown-title">Visual Portfolio</h3>
+                    </div>
+                    <p class="dropdown-text">My photography and videography work including editing and post-production samples.</p>
+                    <div class="dropdown-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Photo/Video Work">
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">3D/Design</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <div class="dropdown-icon">✏️</div>
+                        <h3 class="dropdown-title">Design Portfolio</h3>
+                    </div>
+                    <p class="dropdown-text">My 3D modeling, rendering, animation, and graphic design projects and case studies.</p>
+                    <div class="dropdown-image">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="3D Design Work">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Mohammed Faihan</h1>
-            <p class="tagline">Electronics Enthusiast • Robotics Maker • 3D Designer</p>
-            
-            <div class="skills-container">
-                <div class="skill-pill" style="animation-delay: 0.1s">Electronics</div>
-                <div class="skill-pill" style="animation-delay: 0.2s">Robotics</div>
-                <div class="skill-pill" style="animation-delay: 0.3s">Making</div>
-                <div class="skill-pill" style="animation-delay: 0.4s">Graphic Design</div>
-                <div class="skill-pill" style="animation-delay: 0.5s">CAD Design</div>
-                <div class="skill-pill" style="animation-delay: 0.6s">3D Printing</div>
-                <div class="skill-pill" style="animation-delay: 0.7s">3D Rendering</div>
-                <div class="skill-pill" style="animation-delay: 0.8s">Product Animation</div>
-            </div>
-            
-            <a href="#projects" class="cta-button">View My Projects</a>
+            <h1>Hi, I'm <span class="highlight">Mohammed Faihan</span></h1>
+            <p class="tagline">
+                I am a Computer Engineering Student with practical experience in Robotics, Embedded Electronics and Product Design/Protyping.<br>
+                I also am skilled in Graphic Design, 3d Motion Graphics and Videography/Photgraphy. 
+            </p>
+            <!-- You can add a CTA button here later -->
+        </div>
+        <div class="hero-image">
+            <!-- Replace with your transparent PNG image -->
+            <img src="https://www.transparentpng.com/thumb/robot/robot-icon-transparent-background-22.png" alt="My Interests Illustration" id="main-image">
         </div>
     </section>
 
     <script>
-        // Simple JavaScript to handle scroll animations
+        // Simple JavaScript for interactive elements
         document.addEventListener('DOMContentLoaded', () => {
-            // This would be expanded with Intersection Observer for other sections
-            console.log('Portfolio loaded!');
+            // Add hover effects to nav items
+            const navItems = document.querySelectorAll('.nav-item');
             
-            // You can add more interactive elements here
-            const skills = document.querySelectorAll('.skill-pill');
-            skills.forEach(skill => {
-                skill.addEventListener('mouseover', () => {
-                    skill.style.transform = 'scale(1.1)';
-                    skill.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.querySelector('.nav-link').style.color = 'var(--primary)';
                 });
-                skill.addEventListener('mouseout', () => {
-                    skill.style.transform = 'scale(1)';
-                    skill.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+                
+                item.addEventListener('mouseleave', () => {
+                    item.querySelector('.nav-link').style.color = 'var(--dark)';
                 });
             });
+            
+            // You can add more interactivity here
+            console.log('Portfolio loaded!');
         });
     </script>
 </body>
