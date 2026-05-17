@@ -17,8 +17,8 @@ const projects = {
             id: 'project-2',
             title: 'Mechanical Arm Design',
             category: '3D Design & Graphics',
-            image: 'https://via.placeholder.com/400x400?text=Mechanical+Arm',
-            description: 'Full CAD design and 3D-printed robotic manipulator with 6 degrees of freedom.',
+            image: './images/Screenshot 2026-05-11 220620.png',
+            description: 'Full CAD design and 3D-printed robotic manipulator with 3 degrees of freedom.',
             link: 'projects/mechanical-arm.html'
         },
         {
@@ -61,8 +61,8 @@ const projects = {
             id: 'project-2',
             title: 'Mechanical Arm Design',
             category: '3D Design & Graphics',
-            image: 'https://via.placeholder.com/400x400?text=Mechanical+Arm',
-            description: 'Full CAD design and 3D-printed robotic manipulator with 6 degrees of freedom.',
+            image: './images/Screenshot 2026-05-11 220620.png',
+            description: 'Full CAD design and 3D-printed robotic manipulator with 3 degrees of freedom.',
             link: 'projects/mechanical-arm.html'
         },
         {
@@ -103,6 +103,7 @@ const content = document.getElementById('content');
 document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     setupNavigation();
+    setupHamburger();
 });
 
 // Load projects into the grid
@@ -209,4 +210,33 @@ if ('IntersectionObserver' in window) {
     });
 
     images.forEach(img => imageObserver.observe(img));
+}
+
+// Hamburger menu setup
+function setupHamburger() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-container')) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
 }
