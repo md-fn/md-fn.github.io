@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Automation System - Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="/#home" class="nav-link">Home</a>
+                <a href="/#electronics" class="nav-link">Electronics & Robotics</a>
+                <a href="/#3d-design" class="nav-link">3D Design</a>
+                <a href="/#photography" class="nav-link">Photography</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content">
+        <div class="detail-header">
+            <a href="/#electronics" class="back-button">Electronics & Robotics</a>
+            
+            <h1 class="detail-title">Smart Home Automation System</h1>
+            
+            <div class="detail-meta">
+                <span>📅 2024</span>
+                <span>⏱️ 3 months</span>
+                <span>🛠️ Arduino, IoT, Python</span>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <!-- OVERVIEW SECTION -->
+            <section class="detail-section">
+                <h2>Overview</h2>
+                <p>
+                    A custom-built IoT automation system that controls lighting, temperature, and security across a smart home. 
+                    The project combines Arduino-based hardware with cloud connectivity and a mobile app interface for seamless control 
+                    from anywhere. This was my first deep dive into embedded systems and IoT architecture.
+                </p>
+                <p>
+                    The system handles real-time sensor data, processes it intelligently, and triggers automated responses—all while 
+                    maintaining security and minimizing power consumption.
+                </p>
+            </section>
+
+            <!-- FEATURED IMAGE/GIF -->
+            <div class="detail-image">
+                <img src="https://via.placeholder.com/800x600?text=Smart+Home+System" alt="Smart home dashboard">
+            </div>
+
+            <!-- CHALLENGE SECTION -->
+            <section class="detail-section">
+                <h2>The Challenge</h2>
+                <p>
+                    Most commercial smart home systems are expensive and proprietary, lacking customization. I wanted to build 
+                    a system that was:
+                </p>
+                <ul style="margin: 1rem 0 0 2rem; color: var(--text-light);">
+                    <li>Modular and expandable</li>
+                    <li>Cost-effective to build and maintain</li>
+                    <li>Responsive and reliable</li>
+                    <li>Secure against network threats</li>
+                </ul>
+            </section>
+
+            <!-- SOLUTION SECTION -->
+            <section class="detail-section">
+                <h2>Solution & Design</h2>
+                <p>
+                    I built the system on a distributed Arduino network with an MQTT broker for communication. Each room has 
+                    a dedicated sensor node that communicates wirelessly with a central hub. The hub runs a Python backend that 
+                    handles automation logic, database storage, and API endpoints for mobile apps.
+                </p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Architecture Layers:</h3>
+                <ul style="margin: 0 0 0 2rem; color: var(--text-light);">
+                    <li><strong>Hardware Layer:</strong> Arduino Mega boards with RF modules, temperature sensors, motion detectors</li>
+                    <li><strong>Network Layer:</strong> MQTT over WiFi with encrypted payloads</li>
+                    <li><strong>Logic Layer:</strong> Python backend with rule engine for automation</li>
+                    <li><strong>Interface Layer:</strong> Web dashboard and mobile app (React Native)</li>
+                </ul>
+            </section>
+
+            <!-- PROCESS SECTION -->
+            <section class="detail-section">
+                <h2>Development Process</h2>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Hardware Prototyping</h3>
+                <p>
+                    Started with basic sensor tests on a breadboard. Tested communication protocols and power consumption 
+                    to ensure the system could run on battery power for sensor nodes.
+                </p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Network Architecture</h3>
+                <p>
+                    Designed and tested MQTT topology. Implemented redundancy to handle node failures gracefully. 
+                    Added encryption to all communications between nodes and server.
+                </p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Backend Development</h3>
+                <p>
+                    Built a Python Flask API with SQLite database for storing sensor history. Implemented webhook system 
+                    for real-time notifications and automation triggers.
+                </p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">4. User Interface</h3>
+                <p>
+                    Created a responsive web dashboard for desktop and a mobile app for iOS/Android using React Native. 
+                    Focus on intuitive controls and real-time status updates.
+                </p>
+            </section>
+
+            <!-- IMAGE GALLERY -->
+            <section class="detail-section">
+                <h2>Visual Gallery</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div class="detail-image">
+                        <img src="https://via.placeholder.com/400x300?text=Sensor+Node" alt="Sensor node prototype">
+                    </div>
+                    <div class="detail-image">
+                        <img src="https://via.placeholder.com/400x300?text=Central+Hub" alt="Central hub assembly">
+                    </div>
+                    <div class="detail-image">
+                        <img src="https://via.placeholder.com/400x300?text=App+Interface" alt="Mobile app interface">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TECHNICAL DETAILS -->
+            <section class="detail-section">
+                <h2>Technical Specs</h2>
+                <div style="background: #fafafa; padding: 1.5rem; border-radius: 4px; margin-top: 1rem;">
+                    <p><strong>Microcontroller:</strong> Arduino Mega 2560</p>
+                    <p><strong>Wireless:</strong> NRF24L01 2.4GHz RF modules</p>
+                    <p><strong>Sensors:</strong> DHT22 (temp/humidity), PIR (motion), MQ-2 (gas)</p>
+                    <p><strong>Backend:</strong> Python 3.8 + Flask + SQLite</p>
+                    <p><strong>Messaging:</strong> MQTT (Mosquitto broker)</p>
+                    <p><strong>Frontend:</strong> React.js dashboard, React Native mobile app</p>
+                    <p><strong>Power:</strong> Central hub on 12V power supply, sensor nodes on AA batteries (6-month life)</p>
+                </div>
+            </section>
+
+            <!-- VIDEO SECTION (if you have one) -->
+            <section class="detail-section">
+                <h2>Video Walkthrough</h2>
+                <p style="margin-bottom: 1rem;">
+                    Here's a quick demo of the system in action:
+                </p>
+                <div class="detail-image">
+                    <video width="100%" controls>
+                        <source src="path/to/your/demo-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- RESULTS & IMPACT -->
+            <section class="detail-section">
+                <h2>Results & Learnings</h2>
+                <p>
+                    The system has been running stably for 8 months with 99.2% uptime. I've learned invaluable lessons about 
+                    IoT architecture, power management, and building systems that need to be reliable 24/7.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Key takeaways:</strong>
+                </p>
+                <ul style="margin: 0.5rem 0 0 2rem; color: var(--text-light);">
+                    <li>Network reliability is critical—redundancy is worth the complexity</li>
+                    <li>Power consumption compounds quickly; every mA matters in battery systems</li>
+                    <li>Logging and monitoring make debugging real-world systems much easier</li>
+                    <li>Simple, durable hardware beats fancy components that fail in harsh environments</li>
+                </ul>
+            </section>
+
+            <!-- NEXT STEPS / FUTURE -->
+            <section class="detail-section">
+                <h2>Future Improvements</h2>
+                <ul style="margin: 0 0 0 2rem; color: var(--text-light);">
+                    <li>Add machine learning for predictive automation</li>
+                    <li>Implement voice control integration (Alexa/Google Home)</li>
+                    <li>Expand to energy usage analytics and optimization</li>
+                    <li>Open-source the project on GitHub</li>
+                </ul>
+            </section>
+
+            <!-- CTA / LINKS -->
+            <section class="detail-section" style="text-align: center; padding: 2rem 0;">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Want to learn more?</h2>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <a href="#" style="
+                        padding: 0.75rem 1.5rem;
+                        background: var(--accent);
+                        color: white;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        transition: opacity 0.3s ease;
+                    " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                        View Source Code
+                    </a>
+                    <a href="/#electronics" style="
+                        padding: 0.75rem 1.5rem;
+                        border: 1px solid var(--accent);
+                        color: var(--accent);
+                        border-radius: 4px;
+                        text-decoration: none;
+                        transition: all 0.3s ease;
+                    " onmouseover="this.style.background='var(--accent)'; this.style.color='white'" onmouseout="this.style.background='transparent'; this.style.color='var(--accent)'">
+                        More Electronics Projects
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 [Your Name]. Crafted with attention to detail.</p>
+        <div class="social-links">
+            <a href="#" class="social-link">GitHub</a>
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Email</a>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
