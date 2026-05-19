@@ -57,7 +57,7 @@ const projects = {
             image:       'Media/Custom CoreXy/IMG20250806122016.jpg',
             description: 'Built from salvaged parts on a community CoreXY frame. Several components redesigned from scratch — carriage, tensioners, Z mounts — to fit my specific steppers, linear rails, and frame dimensions.',
             tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design'],
-            link:        'projects/3d-designs.html#corexy'
+            link:        'projects/corexy.html'
         },
         {
             id:          'bt-speaker',
@@ -146,7 +146,7 @@ const projects = {
             image:       'Media/Custom CoreXy/IMG20251107010233.jpg',
             description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific steppers, linear rails, and frame dimensions.',
             tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
-            link:        'projects/3d-designs.html#corexy'
+            link:        'projects/corexy.html'
         },
         {
             id:          'bt-speaker',

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CoreXY 3D Printer — MD FN Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../index.html#home"     class="nav-item">HOME</a>
+                <a href="../index.html#robotics" class="nav-item">ROBOTICS</a>
+                <a href="../index.html#design"   class="nav-item">DESIGN</a>
+                <a href="../index.html#about"    class="nav-item">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div class="detail-nav">
+        <a href="../index.html#design" class="back-button">3D DESIGN &amp; FABRICATION</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <span class="detail-eyebrow">3D Design &amp; Fabrication · Personal Build</span>
+        <h1 class="detail-title">Custom CoreXY<br>3D Printer</h1>
+        <div class="detail-meta">
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">STATUS</span>
+                <span class="detail-meta-value">Operational — printing parts daily</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">FRAME</span>
+                <span class="detail-meta-value">Community CoreXY design — salvaged parts</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">CAD</span>
+                <span class="detail-meta-value">Autodesk Fusion 360</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MOTION</span>
+                <span class="detail-meta-value">Linear rails — custom carriage &amp; tensioners</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MATERIAL</span>
+                <span class="detail-meta-value">PLA / PETG</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-content">
+
+        <!-- ── HERO ───────────────────────────────────────────── -->
+        <div class="hero-images">
+            <div class="hero-img-panel">
+                <img src="../Media/Custom CoreXy/IMG20250806122016.jpg" alt="CoreXY printer — later build stage">
+                <span class="hero-img-label">LATER BUILD STAGE</span>
+            </div>
+            <div class="hero-img-panel">
+                <img src="../Media/Custom CoreXy/IMG20251107010233.jpg" alt="CoreXY printer — current state">
+                <span class="hero-img-label">CURRENT STATE — BOTH PRINTERS RUNNING</span>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ────────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Overview</h2>
+            <p>Built from salvaged inkjet printer parts using a community CoreXY frame design. The frame dimensions and the salvaged steppers didn't match any existing printed parts, so I redesigned the critical motion components from scratch in Fusion 360 — X-axis carriage, belt tensioners, and Z-axis lead-screw mounts.</p>
+            <p>This is the machine that prints most of the parts elsewhere on this site.</p>
+        </div>
+
+        <!-- ── REDESIGNED COMPONENTS ───────────────────────────── -->
+        <div class="detail-section">
+            <h2>Redesigned Components</h2>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">X-Axis Carriage</span>
+                    <span class="spec-value">Custom carriage designed around the specific linear rail and hotend dimensions — standard community parts didn't fit the salvaged rail spacing.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Belt Tensioners</span>
+                    <span class="spec-value">Redesigned for the belt path geometry of this frame. Allows independent A/B belt tension adjustment without disassembly.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Z-Axis Mounts</span>
+                    <span class="spec-value">Lead-screw mounts resized to match the salvaged stepper shaft diameter and frame extrusion positions.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Part Cooling</span>
+                    <span class="spec-value">Custom fan duct designed to match the hotend geometry and direct airflow evenly around the nozzle.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── BUILD PROGRESSION ──────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Build Progression</h2>
+
+            <div class="img-grid img-grid-2" style="margin-top:1.5rem;">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG_250111_223351.jpg" alt="Early build — frame and motion system">
+                    <div class="img-cell-caption">Early build — frame and motion system</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG_250111_223410.jpg" alt="X-axis carriage and linear rail">
+                    <div class="img-cell-caption">X-axis carriage and linear rail detail</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250703230016.jpg" alt="Frame assembly progress">
+                    <div class="img-cell-caption">Frame assembly — wiring run</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250703230128.jpg" alt="Stepper and belt routing">
+                    <div class="img-cell-caption">Stepper mounts and belt routing</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250703230308.jpg" alt="Z axis assembly">
+                    <div class="img-cell-caption">Z-axis lead-screw and bed mount</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250703230930.jpg" alt="Electronics bay">
+                    <div class="img-cell-caption">Electronics bay</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250611182006.jpg" alt="Mid-build frame">
+                    <div class="img-cell-caption">Mid-build — frame fully assembled</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250611195426.jpg" alt="Hotend and part cooling fan mount">
+                    <div class="img-cell-caption">Hotend and part cooling fan mount</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Custom CoreXy/IMG20250806122016.jpg" alt="Later stage — enclosure and panels">
+                    <div class="img-cell-caption">Later stage — enclosure and panels fitted</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Custom CoreXy/IMG20251107010233.jpg" alt="Current state — both printers running">
+                    <div class="img-cell-caption">Current state — both printers running</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
+        </div>
+    </footer>
+
+</body>
+</html>
