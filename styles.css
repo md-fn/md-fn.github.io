@@ -1097,3 +1097,36 @@ main {
     .img-grid-2,
     .img-grid-3 { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   YOUTUBE EMBED — portrait 9:16 wrapper
+   ============================================================ */
+
+.yt-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    background: #000;
+}
+
+.yt-wrapper::before {
+    content: '';
+    display: block;
+    padding-top: 177.9%;   /* 9:16 portrait ratio */
+}
+
+.yt-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 540px) {
+    .yt-wrapper { max-width: 100%; }
+}
