@@ -18,7 +18,7 @@ const projects = {
             id:          'robotic-arm',
             title:       'Color-Sorting Robotic Arm',
             category:    'Robotics & Embedded',
-            image:       'Media/Robotic Arm/Arm 1.jpg',
+            image:       'Media/Robotic Arm/Arm 2.jpg',
             description: 'Fully designed in Fusion 360. 4-bar linkages keep the end-effector level, herringbone 2:1 gear at the base, parallel servo gripper, single-flange bearings for smooth low-backlash joints. PIC18 + TCS3200 color sensor drives automated color sorting.',
             tags:        ['Fusion 360', 'PIC18', '28BYJ-48', '3D Print', 'TCS3200'],
             link:        'projects/robotic-arm.html'
@@ -28,7 +28,7 @@ const projects = {
             title:       'Ball-Redirecting Goal Robot',
             category:    'Robotics & Embedded',
             image:       'Media/CDP 2026/Main Image - current state.jpg',
-            description: 'IEEE CDP 2026 — A stepper motor rotates a deflector panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
+            description: 'IEEE CDP 2026 — A stepper motor rotates a panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
             tags:        ['RPi 4B', 'OpenCV', 'Stepper', 'TMC2209', 'Arduino Nano'],
             link:        'projects/cdp-2026.html'
         },
@@ -37,7 +37,7 @@ const projects = {
             title:       'Line-Following Robot',
             category:    'Robotics & Embedded',
             image:       'Media/CDP 2025/Robot Main.jpg',
-            description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 4B, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
+            description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 5, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
             tags:        ['Raspberry Pi', 'OpenCV', 'PID', 'Custom Sensors'],
             link:        'projects/cdp-2025.html'
         },
@@ -54,9 +54,9 @@ const projects = {
             id:          'corexy-printer',
             title:       'Custom CoreXY 3D Printer',
             category:    '3D Design & Fabrication',
-            image:       'Media/Custom CoreXy/IMG20250806122016.jpg',
-            description: 'Built from salvaged parts on a community CoreXY frame. Several components redesigned from scratch — carriage, tensioners, Z mounts — to fit my specific steppers, linear rails, and frame dimensions.',
-            tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design'],
+            image:       'Media/Custom CoreXy/Main.png',
+            description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific Components.',
+            tags:        ['3D Printing', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
             link:        'projects/corexy.html'
         },
         {
@@ -64,9 +64,18 @@ const projects = {
             title:       'Bluetooth Speaker Enclosure',
             category:    '3D Design & Fabrication',
             image:       'Media/Speaker Enclosure/1779185453791.jpg',
-            description: 'Stripped an old Bluetooth speaker module and designed a completely new housing in Fusion 360 — modern aesthetic, improved internal geometry for better bass, redesigned controls placement.',
-            tags:        ['Fusion 360', 'Industrial Design', 'FDM'],
+            description: 'Stripped an old Bluetooth speaker module and designed a completely new housing in Fusion 360  modern aesthetic, improved internal geometry for better bass, redesigned controls placement.',
+            tags:        ['Fusion 360', 'Industrial Design', '3d Printing'],
             link:        'projects/3d-designs.html#speaker'
+        },
+        {
+            id:          'bird-table',
+            title:       'Bird Table — Wood &amp; 3D Print',
+            category:    '3D Design & Fabrication',
+            image:       'Media/3d printign and wood - bird table/IMG_250220_225927.jpg',
+            description: 'Hybrid wood-and-3D-print garden bird table. Structural frame is wood; connector brackets, roof trim, and feed tray mounts are all PETG-printed parts designed in Fusion 360 to fit the timber dimensions exactly.',
+            tags:        ['Fusion 360', '3d Printing', 'Wood', 'Hybrid Build'],
+            link:        'projects/3d-designs.html#bird-table'
         }
     ],
 
@@ -76,7 +85,7 @@ const projects = {
             id:          'robotic-arm',
             title:       'Color-Sorting Robotic Arm',
             category:    'Robotics & Embedded',
-            image:       'Media/Robotic Arm/Arm 1.jpg',
+            image:       'Media/Robotic Arm/Arm 2.jpg',
             description: 'Fully designed in Fusion 360. 4-bar linkages keep the end-effector level, herringbone 2:1 gear at the base, parallel servo gripper, single-flange bearings for smooth low-backlash joints. PIC18 + TCS3200 color sensor drives automated color sorting.',
             tags:        ['Fusion 360', 'PIC18', '28BYJ-48', 'ULN2003', 'TCS3200'],
             link:        'projects/robotic-arm.html'
@@ -116,15 +125,6 @@ const projects = {
             description: '1st Place — DEWA AI Competition (Grade 12). Autonomous pipeline inspection robot with AI-driven anomaly detection and real-time reporting.',
             tags:        ['AI', 'Autonomous', 'Robotics', 'Competition'],
             link:        'projects/dewa-pipeline.html'
-        },
-        {
-            id:          'health-glove',
-            title:       'Smart Health Glove',
-            category:    'Robotics & Embedded',
-            image:       '',
-            description: '1st Place — GMU Contest 2022. Wearable glove with pulse, SpO2, temperature, and flex sensors streaming live data to a Blynk IoT dashboard.',
-            tags:        ['Sensors', 'IoT', 'Blynk', 'Wearable'],
-            link:        'projects/health-glove.html'
         }
     ],
 
@@ -136,25 +136,25 @@ const projects = {
             category:    '3D Design & Fabrication',
             image:       'Media/Robotic Arm/Wireframe main.jpg',
             description: 'Complete Fusion 360 design: herringbone 2:1 base gear, dual 4-bar parallel linkages keeping the end-effector level, single-flange bearing joints for minimal backlash, and a parallel servo gripper. Fully 3D-printed and assembled.',
-            tags:        ['Fusion 360', 'Herringbone Gear', '4-bar Linkage', 'FDM', 'Single-Flange Bearings'],
+            tags:        ['Fusion 360', 'Herringbone Gear', '4-bar Linkage', '3d Printing', 'Single-Flange Bearings'],
             link:        'projects/robotic-arm.html'
         },
         {
             id:          'corexy-printer',
             title:       'Custom CoreXY 3D Printer',
             category:    '3D Design & Fabrication',
-            image:       'Media/Custom CoreXy/IMG20251107010233.jpg',
-            description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific steppers, linear rails, and frame dimensions.',
-            tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
+            image:       'Media/Custom CoreXy/Main.png ',
+            description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific Components.',
+            tags:        ['3D Printing', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
             link:        'projects/corexy.html'
         },
         {
             id:          'bt-speaker',
-            title:       'Custom Bluetooth Speaker Housing',
+            title:       'Bluetooth Speaker Enclosure',
             category:    '3D Design & Fabrication',
             image:       'Media/Speaker Enclosure/1779185453791.jpg',
-            description: 'Stripped an old Bluetooth speaker and designed a completely new housing from scratch. Modern aesthetic, improved internal geometry for better bass response, and redesigned controls placement.',
-            tags:        ['Fusion 360', 'Industrial Design', 'Acoustics', 'FDM'],
+            description: 'Stripped an old Bluetooth speaker module and designed a completely new housing in Fusion 360  modern aesthetic, improved internal geometry for better bass, redesigned controls placement.',
+            tags:        ['Fusion 360', 'Industrial Design', '3d Printing'],
             link:        'projects/3d-designs.html#speaker'
         },
         {
@@ -163,7 +163,7 @@ const projects = {
             category:    '3D Design & Fabrication',
             image:       '',
             description: 'Slides up/down an aluminium tube, rotates, and tilts via a 4-bar linkage that keeps the centre of rotation near the tube — so it stays in position without counterweights.',
-            tags:        ['Fusion 360', '4-bar Linkage', 'FDM', 'Aluminium Tube'],
+            tags:        ['Fusion 360', '4-bar Linkage', '3d Printing'],
             link:        'projects/3d-designs.html#monitor-arm'
         },
         {
@@ -172,7 +172,7 @@ const projects = {
             category:    '3D Design & Fabrication',
             image:       'Media/3d printign and wood - bird table/IMG_250220_225927.jpg',
             description: 'Hybrid wood-and-3D-print garden bird table. Structural frame is wood; connector brackets, roof trim, and feed tray mounts are all PETG-printed parts designed in Fusion 360 to fit the timber dimensions exactly.',
-            tags:        ['Fusion 360', 'FDM', 'Wood', 'Hybrid Build'],
+            tags:        ['Fusion 360', '3d Printing', 'Wood', 'Hybrid Build'],
             link:        'projects/3d-designs.html#bird-table'
         },
         {
@@ -180,8 +180,8 @@ const projects = {
             title:       '1/5 Scale RC Car Body',
             category:    '3D Design & Fabrication',
             image:       '',
-            description: 'Sleek, aerodynamic 1/5-scale RC car body designed in Fusion 360 and 3D-printed. Also designed sand-capable wheels — hard shell with a tread pattern suited to loose terrain.',
-            tags:        ['Fusion 360', 'Automotive Design', 'FDM', 'RC'],
+            description: 'Sleek, aerodynamic 1/5-scale RC car body designed in Fusion 360 and 3D-printed. Also designed sand capable wheels witha hard shell and a tread pattern suited to desert terrain.',
+            tags:        ['Fusion 360', 'Automotive Design', '3d Printing', 'RC'],
             link:        'projects/3d-designs.html'
         },
         {
@@ -189,8 +189,8 @@ const projects = {
             title:       'Motorized Camera Slider',
             category:    '3D Design & Fabrication',
             image:       '',
-            description: 'Belt-driven motorized camera slider designed and 3D-printed for smooth time-lapse and video motion. Currently work-in-progress.',
-            tags:        ['Fusion 360', 'Stepper Motor', 'FDM', 'WIP'],
+            description: 'Belt-driven motorized camera slider designed and 3D-printed for smooth time-lapse and video motion. Currently work in progress.',
+            tags:        ['Fusion 360', 'Stepper Motor', '3d Printing', 'WIP'],
             link:        'projects/3d-designs.html'
         }
     ]
