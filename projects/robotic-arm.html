@@ -29,7 +29,7 @@
 
     <!-- HEADER -->
     <header class="detail-header">
-        <span class="detail-eyebrow">Robotics &amp; Embedded · 2024 – 2025</span>
+        <span class="detail-eyebrow">Robotics &amp; Embedded · 2026</span>
         <h1 class="detail-title">Color-Sorting<br>Robotic Arm</h1>
         <div class="detail-meta">
             <div class="detail-meta-item">
@@ -50,7 +50,7 @@
             </div>
             <div class="detail-meta-item">
                 <span class="detail-meta-label">CAD</span>
-                <span class="detail-meta-value">Fusion 360 — Fully 3D Printed</span>
+                <span class="detail-meta-value">Autodesk Fusion — Fully 3D Printed</span>
             </div>
         </div>
     </header>
@@ -73,7 +73,7 @@
         <div class="detail-section">
             <h2>Overview</h2>
             <p>Designed entirely from scratch in Fusion 360, 3D-printed, and assembled as a color-sorting demonstration platform. The brief was simple: pick objects from a feed area, read their color, and drop them in the correct bin — using a PIC18, three 28BYJ-48 steppers, and a TCS3200 sensor.</p>
-            <p>Every mechanical decision was driven by real constraints: single-flange bearings to keep joints compact and smooth, a herringbone gear at the base so there is no backlash without pre-loading, and passive 4-bar linkages so the end-effector stays level without burning a motor on wrist orientation.</p>
+            <p>Every mechanical decision was driven by real constraints: single-flange bearings to keep joints compact and smooth, a herringbone gear at the base so there is no backlash without pre-loading, and passive 4-bar linkages so the end-effector stays parallel to the ground without an additional axis.</p>
         </div>
 
         <!-- ── VIDEO DEMO ──────────────────────────────────────── -->
@@ -177,7 +177,7 @@
         <!-- ── ELECTRONICS & FIRMWARE ──────────────────────────── -->
         <div class="detail-section">
             <h2>Electronics &amp; Firmware</h2>
-            <p>The PIC18 runs firmware written in C (MPLAB X / XC8). Each 28BYJ-48 is driven by a ULN2003 board. The TCS3200 sits at the end-effector and outputs RGB as frequency ratios; the firmware classifies these into color bins after a one-time calibration step.</p>
+            <p>The PIC18 runs firmware written in C (MicroC for PIC). Each 28BYJ-48 is driven by a ULN2003 driver. The TCS3200 sits at the front and outputs RGB as frequency ratios; the firmware classifies this data to determine the color of the cube a one-time calibration step.</p>
             <p>Control is a pure sequential state machine: home → move to pick → grip → lift and scan → move to bin → release → home. An LCD shows the current state so you can follow the logic in real time.</p>
 
             <div class="img-grid img-grid-2">
@@ -205,7 +205,7 @@
             <div class="spec-grid" style="margin-top:1.5rem;">
                 <div class="spec-item">
                     <span class="spec-label">MCU</span>
-                    <span class="spec-value">PIC18 — MPLAB X / XC8</span>
+                    <span class="spec-value">PIC18 — MicroC for PIC</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Motors</span>
@@ -233,12 +233,12 @@
         <!-- ── BUILD & ASSEMBLY ────────────────────────────────── -->
         <div class="detail-section">
             <h2>Build &amp; Assembly</h2>
-            <p>All structural parts were printed in PLA on my custom CoreXY printer. The herringbone gears and bearing seats required iterating on fit tolerances — three versions of the shoulder joint before getting consistent press-fits. Total print time across all components was roughly 18 hours.</p>
+            <p>All structural parts were printed in PETG on my 3d printer. The bearings were required to be pressed fit. Total print time across all components was roughly 8 hours.</p>
 
             <div class="img-grid img-grid-2">
                 <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Joint 2.jpg" alt="Elbow joint closeup">
-                    <div class="img-cell-caption">Elbow — 4-bar pivot with single-flange bearing</div>
+                    <div class="img-cell-caption">Elbow — 4-bar pivot with single flange bearing s</div>
                 </div>
                 <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Joints1.jpg" alt="Shoulder joint">
@@ -253,7 +253,7 @@
                 </div>
                 <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/arm wip image.jpg" alt="WIP assembly">
-                    <div class="img-cell-caption">Mid-assembly — wiring and motor bracket installation</div>
+                    <div class="img-cell-caption">Arm assembly — Assembling the mechanical parts and the motor</div>
                 </div>
             </div>
         </div>
@@ -272,7 +272,7 @@
             <div class="footer-name">MOHAMMED FAIHAN</div>
             <div class="footer-links">
                 <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
-                <a href="#" class="footer-link">LINKEDIN</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
                 <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
             </div>
             <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
