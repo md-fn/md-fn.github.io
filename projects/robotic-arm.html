@@ -72,8 +72,8 @@
         <!-- ── OVERVIEW ────────────────────────────────────────── -->
         <div class="detail-section">
             <h2>Overview</h2>
-            <p>Designed entirely from scratch in Fusion 360, 3D-printed, and assembled as a color-sorting demonstration platform. The brief was simple: pick objects from a feed area, read their color, and drop them in the correct bin — using a PIC18, three 28BYJ-48 steppers, and a TCS3200 sensor.</p>
-            <p>Every mechanical decision was driven by real constraints: single-flange bearings to keep joints compact and smooth, a herringbone gear at the base so there is no backlash without pre-loading, and passive 4-bar linkages so the end-effector stays parallel to the ground without an additional axis.</p>
+            <p>Designed entirely from scratch in Fusion 360, 3D-printed, and assembled as a color-sorting robot for my Embedded Systems course.The color sensor reads the color of the objects, the arm picks up objects from the pickup area, and drop them in the correct bin, the bin positions are pre configured — using a PIC18, three 28BYJ-48 steppers ,9g servo, and a TCS3200 sensor.</p>
+            <p>Every mechanical decision was driven by real constraints: single-flange bearings were usedto keep joints compact and smooth, a herringbone gear at the base so there is minimum backlash, and passive 4-bar linkages so the end-effector stays parallel to the ground without an additional axis.</p>
         </div>
 
         <!-- ── VIDEO DEMO ──────────────────────────────────────── -->
@@ -102,11 +102,11 @@
 
             <!-- In-action companion photos -->
             <div class="img-grid img-grid-2">
-                <div class="img-cell img-cell-lg">
+                <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/robot running.jpg" alt="Arm running with LCD display">
                     <div class="img-cell-caption">LCD reads "Moving GRN BIN / Dropping..." during a live run</div>
                 </div>
-                <div class="img-cell img-cell-lg">
+                <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Arm 2.jpg" alt="Side profile of assembled arm">
                     <div class="img-cell-caption">Side profile — 4-bar linkages and herringbone base gear</div>
                 </div>
@@ -163,13 +163,13 @@
 
             <!-- Gripper CAD + gear photo -->
             <div class="img-grid img-grid-2">
-                <div class="img-cell img-cell-wide">
+                <div class="img-cell img-cell-lg">
                     <img src="../Media/Robotic Arm/Cad gripper closeup.jpg" alt="Gripper CAD closeup">
                     <div class="img-cell-caption">CAD — parallel gripper, servo mount, and linkage pivot</div>
                 </div>
-                <div class="img-cell img-cell-wide">
+                <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Herringbon gear Image.jpg" alt="Herringbone gear photo">
-                    <div class="img-cell-caption">Printed herringbone gear pair — base rotation drive</div>
+                    <div class="img-cell-caption">Printed herringbone gear pair & a tension spring as a counter force for the main arm</div>
                 </div>
             </div>
         </div>

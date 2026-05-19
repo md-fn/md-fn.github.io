@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball-Redirecting Goal Robot — CDP 2026 — MD FN Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../index.html#home"     class="nav-item">HOME</a>
+                <a href="../index.html#robotics" class="nav-item">ROBOTICS</a>
+                <a href="../index.html#design"   class="nav-item">DESIGN</a>
+                <a href="../index.html#about"    class="nav-item">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div class="detail-nav">
+        <a href="../index.html#robotics" class="back-button">ROBOTICS &amp; EMBEDDED</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <span class="detail-eyebrow">IEEE Common Design Project · 2026</span>
+        <h1 class="detail-title">Ball-Redirecting<br>Goal Robot</h1>
+        <div class="detail-meta">
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">STATUS</span>
+                <span class="detail-meta-value">Mechanical complete · Electronics WIP</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MCU</span>
+                <span class="detail-meta-value">Arduino Nano</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">ACTUATOR</span>
+                <span class="detail-meta-value">Stepper motor — TMC2209 driver</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">VISION</span>
+                <span class="detail-meta-value">Webcam + Raspberry Pi 4B</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">CAD</span>
+                <span class="detail-meta-value">Autodesk Fusion 360</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-content">
+
+        <!-- ── HERO ───────────────────────────────────────────── -->
+        <div class="hero-images">
+            <div class="hero-img-panel">
+                <img src="../Media/CDP 2026/Main Image - current state.jpg" alt="Robot current build state">
+                <span class="hero-img-label">CURRENT BUILD STATE</span>
+            </div>
+            <div class="hero-img-panel">
+                <img src="../Media/CDP 2026/cad main.png" alt="Fusion 360 main CAD view">
+                <span class="hero-img-label">FUSION 360 — MAIN VIEW</span>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ────────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Overview</h2>
+            <p>A single stepper motor rotates a deflector panel to redirect a tennis ball thrown at the robot into the correct goal. A webcam feeds a Raspberry Pi 4B which calculates ball trajectory in real time and drives the Arduino Nano to position the panel before the ball arrives.</p>
+            <p>The mechanical system is complete and the panel moves correctly. Electronics and firmware integration are ongoing.</p>
+        </div>
+
+        <!-- ── CAD DESIGN ──────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>CAD Design</h2>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2026/cad main.png" alt="Main CAD view">
+                    <div class="img-cell-caption">Main isometric — full assembly</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2026/cad front.png" alt="Front CAD view">
+                    <div class="img-cell-caption">Front view — panel and drive geometry</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-wide">
+                    <img src="../Media/CDP 2026/cad closeup motor.png" alt="Motor mount CAD closeup">
+                    <div class="img-cell-caption">Motor mount closeup — stepper and coupling detail</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PHYSICAL BUILD ─────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Physical Build</h2>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2026/wip frame.jpeg" alt="WIP frame assembly">
+                    <div class="img-cell-caption">Frame assembly — structural WIP</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/CDP 2026/Wip panel moving.gif" alt="Panel moving test">
+                    <div class="img-cell-caption">Deflector panel rotation test</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── ELECTRONICS ─────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Electronics</h2>
+            <p>The control board is a hand-soldered perfboard — Arduino Nano paired with a TMC2209 stepper driver. The TMC2209 runs the motor in UART mode for quiet, high-resolution microstepping without the noise of a standard A4988 driver.</p>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/CDP 2026/Circuit (perfboard _ nano + tmc2209) .jpg" alt="Custom perfboard circuit">
+                    <div class="img-cell-caption">Hand-soldered perfboard — Arduino Nano + TMC2209</div>
+                </div>
+            </div>
+
+            <div class="spec-grid" style="margin-top:1.5rem;">
+                <div class="spec-item">
+                    <span class="spec-label">MCU</span>
+                    <span class="spec-value">Arduino Nano</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Stepper Driver</span>
+                    <span class="spec-value">TMC2209 — UART mode, silent stepping</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Vision Host</span>
+                    <span class="spec-value">Raspberry Pi 4B + webcam — trajectory calculation</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Board</span>
+                    <span class="spec-value">Custom hand-soldered perfboard</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
+        </div>
+    </footer>
+
+</body>
+</html>

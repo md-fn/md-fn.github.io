@@ -24,49 +24,49 @@ const projects = {
             link:        'projects/robotic-arm.html'
         },
         {
-            id:          'ball-redirect',
+            id:          'cdp-2026',
             title:       'Ball-Redirecting Goal Robot',
             category:    'Robotics & Embedded',
-            image:       '',
-            description: 'IEEE CDP 2025 — A single stepper motor rotates a deflector panel to redirect a tennis ball thrown at it into the correct goal. Webcam + Raspberry Pi 4B for real-time angle calculation.',
-            tags:        ['RPi 4B', 'OpenCV', 'Stepper', 'Webcam'],
-            link:        'projects/ball-redirect.html'
+            image:       'Media/CDP 2026/Main Image - current state.jpg',
+            description: 'IEEE CDP 2026 — A stepper motor rotates a deflector panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
+            tags:        ['RPi 4B', 'OpenCV', 'Stepper', 'TMC2209', 'Arduino Nano'],
+            link:        'projects/cdp-2026.html'
         },
         {
-            id:          'line-follower',
-            title:       'Autonomous Line-Following Robot',
+            id:          'cdp-2025',
+            title:       'Line-Following Robot',
             category:    'Robotics & Embedded',
-            image:       '',
-            description: 'IEEE CDP 2024 — Picks and drops coloured cubes into their target zones. Custom 5-LDR analog line sensor array with PID, wheel encoders, RPi + OpenCV, and a 3D-printed adjustable camera mount.',
+            image:       'Media/CDP 2025/Robot Main.jpg',
+            description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 4B, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
             tags:        ['Raspberry Pi', 'OpenCV', 'PID', 'Custom Sensors'],
-            link:        'projects/line-follower.html'
+            link:        'projects/cdp-2025.html'
         },
         {
-            id:          'monitor-arm',
-            title:       '3D-Printed Monitor Arm',
-            category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Slides up/down an aluminium tube, rotates, and tilts via a 4-bar linkage designed so the centre of rotation stays near the pivot point — meaning it stays in place under load without counterweights.',
-            tags:        ['Fusion 360', '4-bar Linkage', 'FDM', 'Aluminium Tube'],
-            link:        'projects/monitor-arm.html'
-        },
-        {
-            id:          'health-glove',
-            title:       'Smart Health Glove',
+            id:          'edp-2025',
+            title:       'Precision Catapult — 2nd Place',
             category:    'Robotics & Embedded',
-            image:       '',
-            description: '1st Place — GMU Contest 2022. Wearable glove with pulse, SpO2, temperature, and flex sensors streaming live data to a Blynk IoT dashboard.',
-            tags:        ['Sensors', 'IoT', 'Blynk', 'Wearable'],
-            link:        'projects/health-glove.html'
+            image:       'Media/EDP 2025/Final Image.jpg',
+            description: 'IEEE Student Day UAE — Engineering Design Project 2025. No electronics allowed. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Wood frame + 3D-printed components designed in Fusion 360.',
+            tags:        ['EDP 2025', 'Fusion 360', '3D Print', 'Mechanical'],
+            link:        'projects/edp-2025.html'
         },
         {
             id:          'corexy-printer',
             title:       'Custom CoreXY 3D Printer',
             category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Built from salvaged printer parts using a community CoreXY frame design. Several mechanical components re-designed from scratch to match my specific steppers, linear rails, and frame dimensions.',
+            image:       'Media/Custom CoreXy/IMG20250806122016.jpg',
+            description: 'Built from salvaged parts on a community CoreXY frame. Several components redesigned from scratch — carriage, tensioners, Z mounts — to fit my specific steppers, linear rails, and frame dimensions.',
             tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design'],
-            link:        'projects/corexy-printer.html'
+            link:        'projects/3d-designs.html#corexy'
+        },
+        {
+            id:          'bt-speaker',
+            title:       'Bluetooth Speaker Enclosure',
+            category:    '3D Design & Fabrication',
+            image:       'Media/Speaker Enclosure/1779185453791.jpg',
+            description: 'Stripped an old Bluetooth speaker module and designed a completely new housing in Fusion 360 — modern aesthetic, improved internal geometry for better bass, redesigned controls placement.',
+            tags:        ['Fusion 360', 'Industrial Design', 'FDM'],
+            link:        'projects/3d-designs.html#speaker'
         }
     ],
 
@@ -82,22 +82,31 @@ const projects = {
             link:        'projects/robotic-arm.html'
         },
         {
-            id:          'ball-redirect',
+            id:          'cdp-2026',
             title:       'Ball-Redirecting Goal Robot',
             category:    'Robotics & Embedded',
-            image:       '',
-            description: 'IEEE CDP 2025 — A single stepper motor rotates a deflector panel to redirect a tennis ball thrown at it into the correct goal. Webcam + Raspberry Pi 4B for real-time angle calculation.',
-            tags:        ['RPi 4B', 'OpenCV', 'Stepper Motor', 'Webcam'],
-            link:        'projects/ball-redirect.html'
+            image:       'Media/CDP 2026/Main Image - current state.jpg',
+            description: 'IEEE CDP 2026 — A stepper motor rotates a deflector panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
+            tags:        ['RPi 4B', 'OpenCV', 'Stepper Motor', 'TMC2209', 'Arduino Nano'],
+            link:        'projects/cdp-2026.html'
         },
         {
-            id:          'line-follower',
-            title:       'Autonomous Line-Following Robot',
+            id:          'cdp-2025',
+            title:       'Line-Following Robot',
             category:    'Robotics & Embedded',
-            image:       '',
-            description: 'IEEE CDP 2024 — Picks and drops coloured cubes into target zones using OpenCV colour detection. Custom 5-LDR line sensor array running on analog PID, wheel encoders, and a 3D-printed camera mount.',
-            tags:        ['Raspberry Pi', 'OpenCV', 'PID Control', 'Custom Sensors', 'Encoders'],
-            link:        'projects/line-follower.html'
+            image:       'Media/CDP 2025/Robot Main.jpg',
+            description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 4B, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
+            tags:        ['Raspberry Pi', 'OpenCV', 'PID Control', 'Custom Sensors'],
+            link:        'projects/cdp-2025.html'
+        },
+        {
+            id:          'edp-2025',
+            title:       'Precision Catapult — 2nd Place',
+            category:    'Robotics & Embedded',
+            image:       'Media/EDP 2025/Final Image.jpg',
+            description: 'IEEE Student Day UAE — EDP 2025. No-electronics mechanical catapult. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Designed in Fusion 360, printed and assembled.',
+            tags:        ['EDP 2025', '2nd Place', 'Fusion 360', '3D Print'],
+            link:        'projects/edp-2025.html'
         },
         {
             id:          'dewa-pipeline',
@@ -116,15 +125,6 @@ const projects = {
             description: '1st Place — GMU Contest 2022. Wearable glove with pulse, SpO2, temperature, and flex sensors streaming live data to a Blynk IoT dashboard.',
             tags:        ['Sensors', 'IoT', 'Blynk', 'Wearable'],
             link:        'projects/health-glove.html'
-        },
-        {
-            id:          'greenhouse',
-            title:       'Smart Miniature Greenhouse',
-            category:    'Robotics & Embedded',
-            image:       '',
-            description: 'Fully automated miniature greenhouse with environmental sensors, irrigation pump, humidifiers, and grow lights. Live monitoring via an IoT dashboard.',
-            tags:        ['IoT', 'Automation', 'Sensors', 'Dashboard'],
-            link:        'projects/greenhouse.html'
         }
     ],
 
@@ -140,40 +140,40 @@ const projects = {
             link:        'projects/robotic-arm.html'
         },
         {
+            id:          'corexy-printer',
+            title:       'Custom CoreXY 3D Printer',
+            category:    '3D Design & Fabrication',
+            image:       'Media/Custom CoreXy/IMG20251107010233.jpg',
+            description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific steppers, linear rails, and frame dimensions.',
+            tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
+            link:        'projects/3d-designs.html#corexy'
+        },
+        {
+            id:          'bt-speaker',
+            title:       'Custom Bluetooth Speaker Housing',
+            category:    '3D Design & Fabrication',
+            image:       'Media/Speaker Enclosure/1779185453791.jpg',
+            description: 'Stripped an old Bluetooth speaker and designed a completely new housing from scratch. Modern aesthetic, improved internal geometry for better bass response, and redesigned controls placement.',
+            tags:        ['Fusion 360', 'Industrial Design', 'Acoustics', 'FDM'],
+            link:        'projects/3d-designs.html#speaker'
+        },
+        {
             id:          'monitor-arm',
             title:       '3D-Printed Monitor Arm',
             category:    '3D Design & Fabrication',
             image:       '',
             description: 'Slides up/down an aluminium tube, rotates, and tilts via a 4-bar linkage that keeps the centre of rotation near the tube — so it stays in position without counterweights.',
             tags:        ['Fusion 360', '4-bar Linkage', 'FDM', 'Aluminium Tube'],
-            link:        'projects/monitor-arm.html'
+            link:        'projects/3d-designs.html#monitor-arm'
         },
         {
-            id:          'corexy-printer',
-            title:       'Custom CoreXY 3D Printer',
+            id:          'bird-table',
+            title:       'Bird Table — Wood &amp; 3D Print',
             category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific steppers, linear rails, and frame dimensions.',
-            tags:        ['CoreXY', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
-            link:        'projects/corexy-printer.html'
-        },
-        {
-            id:          'bt-speaker',
-            title:       'Custom Bluetooth Speaker Housing',
-            category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Stripped an old Bluetooth speaker and designed a completely new housing from scratch. Modern aesthetic, improved internal geometry for better bass response, and redesigned controls placement.',
-            tags:        ['Fusion 360', 'Industrial Design', 'Acoustics', 'FDM'],
-            link:        'projects/bt-speaker.html'
-        },
-        {
-            id:          'rpi5-case',
-            title:       'RPi5 Case with Custom Heatsink',
-            category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Custom Raspberry Pi 5 enclosure designed for the IEEE CDP 2024 robot. Includes a custom-cut aluminium heatsink and 4010 fan mount — maximum cooling in minimum volume.',
-            tags:        ['RPi5', 'Thermal Design', 'FDM', 'Aluminium Heatsink'],
-            link:        'projects/rpi5-case.html'
+            image:       'Media/3d printign and wood - bird table/IMG_250220_225927.jpg',
+            description: 'Hybrid wood-and-3D-print garden bird table. Structural frame is wood; connector brackets, roof trim, and feed tray mounts are all PETG-printed parts designed in Fusion 360 to fit the timber dimensions exactly.',
+            tags:        ['Fusion 360', 'FDM', 'Wood', 'Hybrid Build'],
+            link:        'projects/3d-designs.html#bird-table'
         },
         {
             id:          'rc-car-body',
@@ -182,7 +182,7 @@ const projects = {
             image:       '',
             description: 'Sleek, aerodynamic 1/5-scale RC car body designed in Fusion 360 and 3D-printed. Also designed sand-capable wheels — hard shell with a tread pattern suited to loose terrain.',
             tags:        ['Fusion 360', 'Automotive Design', 'FDM', 'RC'],
-            link:        'projects/rc-car-body.html'
+            link:        'projects/3d-designs.html'
         },
         {
             id:          'camera-slider',
@@ -191,7 +191,7 @@ const projects = {
             image:       '',
             description: 'Belt-driven motorized camera slider designed and 3D-printed for smooth time-lapse and video motion. Currently work-in-progress.',
             tags:        ['Fusion 360', 'Stepper Motor', 'FDM', 'WIP'],
-            link:        'projects/camera-slider.html'
+            link:        'projects/3d-designs.html'
         }
     ]
 };

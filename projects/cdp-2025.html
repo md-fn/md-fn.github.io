@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line-Following Robot — CDP 2025 — MD FN Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../index.html#home"     class="nav-item">HOME</a>
+                <a href="../index.html#robotics" class="nav-item">ROBOTICS</a>
+                <a href="../index.html#design"   class="nav-item">DESIGN</a>
+                <a href="../index.html#about"    class="nav-item">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div class="detail-nav">
+        <a href="../index.html#robotics" class="back-button">ROBOTICS &amp; EMBEDDED</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <span class="detail-eyebrow">IEEE Common Design Project · Internal Competition · 2025</span>
+        <h1 class="detail-title">Line-Following<br>Robot</h1>
+        <div class="detail-meta">
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">STATUS</span>
+                <span class="detail-meta-value">Demonstrated — line following complete</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MCU</span>
+                <span class="detail-meta-value">Raspberry Pi 4B</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">SENSOR</span>
+                <span class="detail-meta-value">Custom 5-LDR analog array</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">GRIPPER</span>
+                <span class="detail-meta-value">Servo-driven parallel gripper</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-content">
+
+        <!-- ── HERO ───────────────────────────────────────────── -->
+        <div class="hero-images">
+            <div class="hero-img-panel">
+                <img src="../Media/CDP 2025/Robot Main.jpg" alt="Line following robot main view">
+                <span class="hero-img-label">ROBOT — MAIN VIEW</span>
+            </div>
+            <div class="hero-img-panel">
+                <img src="../Media/CDP 2025/car,camera and rpi .jpg" alt="Robot with camera and Raspberry Pi">
+                <span class="hero-img-label">CAMERA &amp; RPi MOUNTED</span>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ────────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Overview</h2>
+            <p>Built for the IEEE CDP 2025 internal university competition. The task involved following a line track and picking up and placing coloured cubes into target zones. I built and programmed the full system — chassis, sensor array, gripper, camera mount, RPi enclosure, and all firmware.</p>
+            <p>The demo focused on the line-following capability, which was solid. The OpenCV colour-detection pipeline was partially working but not competition-ready by demo day.</p>
+        </div>
+
+        <!-- ── SUBSYSTEMS ──────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Subsystems</h2>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Line Sensor Array</span>
+                    <span class="spec-value">Five LDRs on a custom 3D-printed frame. Analog readings fed into a PID loop that drives differential wheel speed for smooth line tracking.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Parallel Gripper</span>
+                    <span class="spec-value">Servo-driven gripper with symmetric finger travel. Designed for the cube dimensions specified in the competition brief.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Camera &amp; Vision</span>
+                    <span class="spec-value">RPi camera mounted on a 3D-printed adjustable stand at the front. Intended for HSV-based cube colour detection via OpenCV.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">RPi Enclosure</span>
+                    <span class="spec-value">Custom Raspberry Pi 4B case with a machined aluminium heatsink and 40mm fan for sustained operation without thermal throttling.</span>
+                </div>
+            </div>
+
+            <!-- LDR array -->
+            <div class="img-grid img-grid-2" style="margin-top:2rem;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2025/Line Following ldr Array with 3d printed frame.jpg" alt="LDR array with 3D-printed frame">
+                    <div class="img-cell-caption">5-LDR array — 3D-printed sensor frame</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2025/Line Following ldr Array.jpg" alt="LDR array closeup">
+                    <div class="img-cell-caption">LDR array — sensor board detail</div>
+                </div>
+            </div>
+
+            <!-- Gripper -->
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/CDP 2025/Servo gripper closeup.jpg" alt="Gripper closeup">
+                    <div class="img-cell-caption">Servo gripper — closeup</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2025/Gripper (1).png" alt="Gripper CAD">
+                    <div class="img-cell-caption">Gripper CAD — parallel finger mechanism</div>
+                </div>
+            </div>
+
+            <!-- Camera + RPi -->
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2025/camera mount stand .png" alt="Camera mount CAD">
+                    <div class="img-cell-caption">Camera mount stand — Fusion 360</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/CDP 2025/camera .jpg" alt="Camera mounted on robot">
+                    <div class="img-cell-caption">Camera mounted and wired</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/CDP 2025/Rpi Custom heat sink.jpg" alt="Custom heatsink on RPi">
+                    <div class="img-cell-caption">RPi 4B — custom aluminium heatsink</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/CDP 2025/Pi case.png" alt="RPi case CAD">
+                    <div class="img-cell-caption">Custom RPi enclosure — Fusion 360</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
+        </div>
+    </footer>
+
+</body>
+</html>

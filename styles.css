@@ -455,9 +455,7 @@ main {
     grid-row: span 2;
 }
 
-.projects-bento .project-card:nth-child(1) .project-image-wrapper {
-    aspect-ratio: 4 / 3;
-}
+/* bento card 1: no forced aspect-ratio — image defines height naturally */
 
 /* Card 4: 2 cols wide */
 .projects-bento .project-card:nth-child(4) {
@@ -517,18 +515,15 @@ main {
 
 .project-image-wrapper {
     width: 100%;
-    aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: var(--surface-2);
-    /* When no image: show a subtle gradient placeholder */
     background: linear-gradient(135deg, #141414, #1e1e1e);
     position: relative;
+    min-height: 120px; /* fallback height when card has no image */
 }
 
 .project-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
     filter: grayscale(15%) brightness(0.9);
     transition: transform 0.4s ease, filter 0.3s ease;
@@ -1057,6 +1052,7 @@ main {
 .img-grid {
     display: grid;
     gap: 1rem;
+    align-items: start;
     margin: 1.5rem 0;
 }
 
