@@ -3,94 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mohammed Faihan — Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">Portfolio</a>
-            <button class="hamburger" id="hamburger">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active" data-section="home">Home</a>
-                <a href="#electronics" class="nav-link" data-section="electronics">Electronics & Robotics</a>
-                <a href="#3d-design" class="nav-link" data-section="3d-design">3D Design</a>
-                <a href="#photography" class="nav-link" data-section="photography">Photography</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home"     class="nav-item active" data-section="home">HOME</a>
+                <a href="#robotics" class="nav-item"        data-section="robotics">ROBOTICS</a>
+                <a href="#design"   class="nav-item"        data-section="design">DESIGN</a>
+                <a href="#about"    class="nav-item"        data-section="about">ABOUT</a>
             </div>
         </div>
     </nav>
 
-    <main id="content">
-        <!-- HOME SECTION -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1 class="hero-title">Hi, I'm [Your Name]</h1>
-                    <p class="hero-subtitle">
-                        Designer, builder, and creator. I design and prototype 
-                        <span class="highlight">physical products</span>, 
-                        <span class="highlight">3D experiences</span>, and 
-                        <span class="highlight">visual stories</span>.
-                    </p>
-                    <p class="hero-description">
-                        From circuit design to 3D printing, Blender to photography—I bring ideas to life through 
-                        hands-on craftsmanship and digital design. Welcome to my work.
-                    </p>
-                </div>
-            </div>
+    <main>
 
-            <section class="projects-grid">
-                <h2 class="section-title">Featured Work</h2>
-                <div class="grid grid-2x2" id="featured-projects">
-                    <!-- Projects loaded here by JavaScript -->
+        <!-- ======================== HOME ======================== -->
+        <section id="home" class="section active">
+
+            <div class="hero-block">
+
+                <div class="hero-eyebrow">
+                    <span class="mono-tag">CE STUDENT · AJMAN UNIVERSITY · CLASS OF 2027</span>
+                </div>
+
+                <div class="hero-center">
+                    <div class="hero-name">
+                        <span class="name-row">MOHAMMED</span>
+                        <span class="name-row name-accent">FAIHAN<span class="cursor-blink">_</span></span>
+                    </div>
+                    <div class="hero-meta">
+                        <div class="hero-meta-group">
+                            <span class="meta-label">FOCUS</span>
+                            <ul class="meta-list">
+                                <li>Embedded Systems &amp; Firmware</li>
+                                <li>Robotics &amp; Automation</li>
+                                <li>3D Design &amp; Fabrication</li>
+                                <li>Computer Vision</li>
+                            </ul>
+                        </div>
+                        <div class="avail-badge">
+                            <span class="avail-dot"></span>
+                            OPEN TO INTERNSHIP
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-footer">
+                    <div class="hero-divider"></div>
+                    <div class="hero-skills">
+                        <span class="skill-tag"><span class="skill-num">01/</span>EMBEDDED</span>
+                        <span class="skill-tag"><span class="skill-num">02/</span>ROBOTICS</span>
+                        <span class="skill-tag"><span class="skill-num">03/</span>3D DESIGN</span>
+                        <span class="skill-tag"><span class="skill-num">04/</span>FABRICATION</span>
+                    </div>
+                </div>
+
+            </div><!-- /hero-block -->
+
+            <!-- FEATURED WORK -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2 class="section-title">FEATURED WORK</h2>
+                </div>
+                <div class="projects-grid projects-bento" id="featured-projects">
+                    <!-- Populated by script.js -->
                 </div>
             </section>
-        </section>
 
-        <!-- ELECTRONICS & ROBOTICS SECTION -->
-        <section id="electronics" class="section category-section">
-            <div class="section-header">
-                <h1>Electronics & Robotics</h1>
-                <p>DIY builds, circuit design, 3D printing, and mechanical projects</p>
-            </div>
-            <div class="grid grid-2x2" id="electronics-projects">
-                <!-- Projects loaded here by JavaScript -->
-            </div>
-        </section>
+        </section><!-- /home -->
 
-        <!-- 3D DESIGN SECTION -->
-        <section id="3d-design" class="section category-section">
-            <div class="section-header">
-                <h1>3D Design & Graphics</h1>
-                <p>Blender modeling, visualization, and graphic design</p>
+
+        <!-- ======================== ROBOTICS ======================== -->
+        <section id="robotics" class="section">
+            <div class="category-header">
+                <h1 class="category-title">ROBOTICS &amp;<br>EMBEDDED</h1>
+                <div class="title-bar"></div>
+                <p class="category-desc">Embedded firmware, autonomous systems, sensor integration, and physical computing.</p>
             </div>
-            <div class="grid grid-2x2" id="3d-design-projects">
-                <!-- Projects loaded here by JavaScript -->
+            <div class="projects-grid" id="robotics-projects">
+                <!-- Populated by script.js -->
             </div>
         </section>
 
-        <!-- PHOTOGRAPHY SECTION -->
-        <section id="photography" class="section category-section">
-            <div class="section-header">
-                <h1>Photography & Videography</h1>
-                <p>Visual storytelling through stills and motion</p>
+
+        <!-- ======================== DESIGN ======================== -->
+        <section id="design" class="section">
+            <div class="category-header">
+                <h1 class="category-title">3D DESIGN &amp;<br>FABRICATION</h1>
+                <div class="title-bar"></div>
+                <p class="category-desc">CAD modelling, mechanical linkage design, 3D printing, and custom-manufactured hardware.</p>
             </div>
-            <div class="grid grid-2x2" id="photography-projects">
-                <!-- Projects loaded here by JavaScript -->
+            <div class="projects-grid" id="design-projects">
+                <!-- Populated by script.js -->
             </div>
         </section>
+
+
+        <!-- ======================== ABOUT ======================== -->
+        <section id="about" class="section">
+            <div class="category-header">
+                <h1 class="category-title">ABOUT</h1>
+                <div class="title-bar"></div>
+            </div>
+            <div class="about-grid">
+
+                <div class="about-bio">
+                    <p>Computer Engineering student at Ajman University, just finished my 3rd year. I design and build things — from embedded firmware and robotics to custom mechanical systems and 3D-printed hardware. My work always ends with something physical that actually works.</p>
+                    <p>Competition wins include 1st place at the DEWA AI Competition (Grade 12) and 1st place at the GMU Smart Health Glove contest. Currently competing in the IEEE Common Design Project and seeking a hardware or robotics internship.</p>
+
+                    <div class="about-edu">
+                        <span class="meta-label">EDUCATION</span>
+                        <p class="edu-degree">B.Sc. Computer Engineering</p>
+                        <p class="edu-school">Ajman University &nbsp;·&nbsp; 2023 – 2027</p>
+                    </div>
+
+                    <div class="about-edu" style="margin-top: 1.5rem;">
+                        <span class="meta-label">COMPETITIONS</span>
+                        <ul class="award-list">
+                            <li>🥇 DEWA AI Competition — Pipeline Monitoring Robot (Grade 12)</li>
+                            <li>🥇 GMU Contest — Smart Health Glove (Grade 12)</li>
+                            <li>IEEE CDP 2024 — Line-Following Robot with Computer Vision</li>
+                            <li>IEEE CDP 2025 — Ball-Redirecting Goal Robot (In Progress)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <div class="skill-group">
+                        <span class="meta-label">EMBEDDED SYSTEMS</span>
+                        <ul>
+                            <li>PIC18 Microcontrollers (MPLAB / XC8)</li>
+                            <li>Raspberry Pi (3 / 4B / 5)</li>
+                            <li>Stepper &amp; Servo Motor Control</li>
+                            <li>Sensor Integration (color, IR, IMU)</li>
+                            <li>PID Control Loops</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <span class="meta-label">3D DESIGN &amp; FABRICATION</span>
+                        <ul>
+                            <li>Fusion 360 — CAD &amp; CAM</li>
+                            <li>FDM 3D Printing</li>
+                            <li>Mechanical Linkage Design</li>
+                            <li>Gear &amp; Drive Systems</li>
+                            <li>Bearing &amp; Shaft Selection</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <span class="meta-label">SOFTWARE &amp; TOOLS</span>
+                        <ul>
+                            <li>Python / OpenCV (Computer Vision)</li>
+                            <li>C / C++ (Embedded Firmware)</li>
+                            <li>Blynk &amp; IoT Dashboards</li>
+                            <li>Git / GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /about-grid -->
+        </section><!-- /about -->
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2024 [Your Name]. Crafted with attention to detail.</p>
-        <div class="social-links">
-            <a href="#" class="social-link">GitHub</a>
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">Email</a>
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
         </div>
     </footer>
 

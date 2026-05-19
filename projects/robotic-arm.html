@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Sorting Robotic Arm — MD FN Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../index.html#home"     class="nav-item">HOME</a>
+                <a href="../index.html#robotics" class="nav-item">ROBOTICS</a>
+                <a href="../index.html#design"   class="nav-item">DESIGN</a>
+                <a href="../index.html#about"    class="nav-item">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div class="detail-nav">
+        <a href="../index.html#robotics" class="back-button">ROBOTICS &amp; EMBEDDED</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <span class="detail-eyebrow">Robotics &amp; Embedded · 2024 – 2025</span>
+        <h1 class="detail-title">Color-Sorting<br>Robotic Arm</h1>
+        <div class="detail-meta">
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">STATUS</span>
+                <span class="detail-meta-value">Complete · CV upgrade planned</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MCU</span>
+                <span class="detail-meta-value">PIC18</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">ACTUATORS</span>
+                <span class="detail-meta-value">28BYJ-48 × 3 · Servo Gripper</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">SENSOR</span>
+                <span class="detail-meta-value">TCS3200 Color</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">CAD</span>
+                <span class="detail-meta-value">Fusion 360 — Fully 3D Printed</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-content">
+
+        <!-- ── HERO SPLIT: REAL vs WIREFRAME ──────────────────── -->
+        <div class="hero-images">
+            <div class="hero-img-panel">
+                <img src="../Media/Robotic Arm/Arm 1.jpg" alt="Assembled robotic arm">
+                <span class="hero-img-label">PHYSICAL BUILD</span>
+            </div>
+            <div class="hero-img-panel">
+                <img src="../Media/Robotic Arm/Wireframe main.jpg" alt="Fusion 360 wireframe">
+                <span class="hero-img-label">FUSION 360 — WIREFRAME</span>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ────────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Overview</h2>
+            <p>Designed entirely from scratch in Fusion 360, 3D-printed, and assembled as a color-sorting demonstration platform. The brief was simple: pick objects from a feed area, read their color, and drop them in the correct bin — using a PIC18, three 28BYJ-48 steppers, and a TCS3200 sensor.</p>
+            <p>Every mechanical decision was driven by real constraints: single-flange bearings to keep joints compact and smooth, a herringbone gear at the base so there is no backlash without pre-loading, and passive 4-bar linkages so the end-effector stays level without burning a motor on wrist orientation.</p>
+        </div>
+
+        <!-- ── VIDEO DEMO ──────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Demo</h2>
+
+            <div class="video-block">
+                <div class="video-block-header">
+                    <span class="video-tag">VIDEO</span>
+                    <span class="video-block-title">Color-Sort Live Run</span>
+                </div>
+                <div class="video-wrapper">
+                    <video
+                        id="armVideo"
+                        src="../Media/Robotic Arm/Video Demo.mp4"
+                        poster="../Media/Robotic Arm/robot running.jpg"
+                        preload="metadata">
+                    </video>
+                    <div class="video-overlay" id="videoOverlay">
+                        <button class="play-btn" id="playBtn" aria-label="Play demo video">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="5,3 19,12 5,21"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    Arm picks from feed, reads color via TCS3200, drops in matched bin — LCD shows current state
+                </div>
+            </div>
+
+            <!-- In-action companion photos -->
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/robot running.jpg" alt="Arm running with LCD display">
+                    <div class="img-cell-caption">LCD reads "Moving GRN BIN / Dropping..." during a live run</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Arm 2.jpg" alt="Side profile of assembled arm">
+                    <div class="img-cell-caption">Side profile — 4-bar linkages and herringbone base gear</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── MECHANICAL DESIGN ───────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Mechanical Design</h2>
+            <p>The arm has four key mechanical subsystems. Each was designed to solve a specific constraint rather than following a standard approach.</p>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Base Rotation</span>
+                    <span class="spec-value">Herringbone 2:1 gear pair — eliminates axial backlash without pre-load, critical for a printed gear running under step-hold torque.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Joint Bearings</span>
+                    <span class="spec-value">Single-flange bearings at each pivot. One bearing per joint keeps the design compact while giving smooth, stable rotation with no rattle.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">4-Bar Linkages</span>
+                    <span class="spec-value">Parallel 4-bar system passively keeps the end-effector horizontal at any arm angle — eliminates the need for a powered wrist DOF.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Gripper</span>
+                    <span class="spec-value">Parallel servo gripper — both fingers move symmetrically, keeping the gripped object centred on the wrist axis regardless of grip force.</span>
+                </div>
+            </div>
+
+            <!-- CAD renders -->
+            <div class="img-grid img-grid-2" style="margin-top:2rem;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Cad arm 2.jpg" alt="CAD front isometric">
+                    <div class="img-cell-caption">CAD — front isometric, 4-bar linkage and elbow joint</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Cad arm.jpg" alt="CAD extended position">
+                    <div class="img-cell-caption">CAD — extended reach position</div>
+                </div>
+            </div>
+
+            <!-- Wireframe views -->
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-sq">
+                    <img src="../Media/Robotic Arm/wireframe sideview.jpg" alt="Wireframe side view">
+                    <div class="img-cell-caption">Wireframe — side view, herringbone base gear detail</div>
+                </div>
+                <div class="img-cell img-cell-sq">
+                    <img src="../Media/Robotic Arm/Wireframe alternate view.jpg" alt="Wireframe 3/4 view">
+                    <div class="img-cell-caption">Wireframe — 3/4 view, gripper and linkage detail</div>
+                </div>
+            </div>
+
+            <!-- Gripper CAD + gear photo -->
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-wide">
+                    <img src="../Media/Robotic Arm/Cad gripper closeup.jpg" alt="Gripper CAD closeup">
+                    <div class="img-cell-caption">CAD — parallel gripper, servo mount, and linkage pivot</div>
+                </div>
+                <div class="img-cell img-cell-wide">
+                    <img src="../Media/Robotic Arm/Herringbon gear Image.jpg" alt="Herringbone gear photo">
+                    <div class="img-cell-caption">Printed herringbone gear pair — base rotation drive</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── ELECTRONICS & FIRMWARE ──────────────────────────── -->
+        <div class="detail-section">
+            <h2>Electronics &amp; Firmware</h2>
+            <p>The PIC18 runs firmware written in C (MPLAB X / XC8). Each 28BYJ-48 is driven by a ULN2003 board. The TCS3200 sits at the end-effector and outputs RGB as frequency ratios; the firmware classifies these into color bins after a one-time calibration step.</p>
+            <p>Control is a pure sequential state machine: home → move to pick → grip → lift and scan → move to bin → release → home. An LCD shows the current state so you can follow the logic in real time.</p>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Circuit 1.jpg" alt="Control circuit">
+                    <div class="img-cell-caption">Control board — PIC18, ULN2003 drivers, LCD, potentiometers</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Circuit 2.jpg" alt="Circuit overview">
+                    <div class="img-cell-caption">Circuit overview — breadboard prototype with stepper wiring</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Tcs3200 Color sensor.jpg" alt="TCS3200 color sensor">
+                    <div class="img-cell-caption">TCS3200 — mounted at end-effector for color detection</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Robotic Arm/Microchip PICKit 2 programmer.jpg" alt="PICKit 2 programmer">
+                    <div class="img-cell-caption">PICKit 2 — used to flash PIC18 firmware</div>
+                </div>
+            </div>
+
+            <div class="spec-grid" style="margin-top:1.5rem;">
+                <div class="spec-item">
+                    <span class="spec-label">MCU</span>
+                    <span class="spec-value">PIC18 — MPLAB X / XC8</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Motors</span>
+                    <span class="spec-value">28BYJ-48 unipolar steppers × 3</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Drivers</span>
+                    <span class="spec-value">ULN2003 Darlington arrays</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Color Sensor</span>
+                    <span class="spec-value">TCS3200 — RGB frequency output</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Gripper Servo</span>
+                    <span class="spec-value">Standard PWM servo (5 V)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Display</span>
+                    <span class="spec-value">16×2 LCD — live state feedback</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── BUILD & ASSEMBLY ────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Build &amp; Assembly</h2>
+            <p>All structural parts were printed in PLA on my custom CoreXY printer. The herringbone gears and bearing seats required iterating on fit tolerances — three versions of the shoulder joint before getting consistent press-fits. Total print time across all components was roughly 18 hours.</p>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Robotic Arm/Joint 2.jpg" alt="Elbow joint closeup">
+                    <div class="img-cell-caption">Elbow — 4-bar pivot with single-flange bearing</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Robotic Arm/Joints1.jpg" alt="Shoulder joint">
+                    <div class="img-cell-caption">Shoulder joint assembly — bearing seat and stepper mount</div>
+                </div>
+            </div>
+
+            <div class="img-grid img-grid-2">
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Robotic Arm/Gripper Closeup 2.jpg" alt="Gripper photo">
+                    <div class="img-cell-caption">Parallel gripper — servo-actuated, symmetric finger travel</div>
+                </div>
+                <div class="img-cell img-cell-tall">
+                    <img src="../Media/Robotic Arm/arm wip image.jpg" alt="WIP assembly">
+                    <div class="img-cell-caption">Mid-assembly — wiring and motor bracket installation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── NEXT STEPS ──────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Next Steps — Computer Vision</h2>
+            <p>The TCS3200 works well in fixed lighting but is sensitive to ambient changes. The planned upgrade replaces it with a camera + OpenCV pipeline on a Raspberry Pi — HSV thresholding or a lightweight classifier for more robust detection, and the ability to pick from arbitrary positions rather than a fixed pick point.</p>
+            <p>This also opens the door to multi-object handling and dynamic bin assignment — turning the current demo into a general-purpose pick-and-place platform.</p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="#" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
+        </div>
+    </footer>
+
+    <!-- VIDEO PLAYER LOGIC -->
+    <script>
+        const video   = document.getElementById('armVideo');
+        const overlay = document.getElementById('videoOverlay');
+
+        function startVideo() {
+            overlay.classList.add('hidden');
+            video.controls = true;
+            video.play();
+        }
+
+        overlay.addEventListener('click', startVideo);
+
+        video.addEventListener('pause', () => {
+            if (!video.ended) overlay.classList.remove('hidden');
+        });
+
+        video.addEventListener('ended', () => {
+            overlay.classList.remove('hidden');
+            video.controls = false;
+        });
+    </script>
+
+</body>
+</html>

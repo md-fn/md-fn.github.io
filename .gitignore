@@ -1,0 +1,9 @@
+# Video files — too large for GitHub (>100 MB limit). Host on YouTube instead.
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# OS files
+.DS_Store
+Thumbs.db
