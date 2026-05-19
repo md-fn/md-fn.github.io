@@ -908,6 +908,7 @@ main {
     border: 1px solid var(--border);
     overflow: hidden;
     margin: 2.5rem 0;
+    
 }
 
 .hero-img-panel {
@@ -1076,10 +1077,10 @@ main {
     display: block;
 }
 
-.img-cell-sq  img { aspect-ratio: 1 / 1; }
-.img-cell-lg  img { aspect-ratio: 4 / 3; }
-.img-cell-wide img { aspect-ratio: 16 / 9; }
-.img-cell-tall img { aspect-ratio: 3 / 4; }
+.img-cell-sq  img { aspect-ratio: 1 / 1;  object-fit: cover; }
+.img-cell-lg  img { aspect-ratio: 4 / 3;  object-fit: cover; }
+.img-cell-wide img { aspect-ratio: 16 / 9; object-fit: cover; }
+.img-cell-tall img { aspect-ratio: 3 / 4;  object-fit: cover; }
 
 .img-cell-caption {
     font-family: var(--mono);
