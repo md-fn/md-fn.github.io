@@ -18,7 +18,7 @@ const projects = {
             id:          'robotic-arm',
             title:       'Color-Sorting Robotic Arm',
             category:    'Robotics & Embedded',
-            image:       'Media/Robotic Arm/Arm 2.jpg',
+            image:       'Media/Robotic Arm/Arm 1.jpg',
             description: 'Fully designed in Fusion 360. 4-bar linkages keep the end-effector level, herringbone 2:1 gear at the base, parallel servo gripper, single-flange bearings for smooth low-backlash joints. PIC18 + TCS3200 color sensor drives automated color sorting.',
             tags:        ['Fusion 360', 'PIC18', '28BYJ-48', '3D Print', 'TCS3200'],
             link:        'projects/robotic-arm.html'
@@ -45,7 +45,7 @@ const projects = {
             id:          'edp-2025',
             title:       'Precision Catapult — 2nd Place',
             category:    '3D Design & Fabrication',
-            image:       'Media/EDP 2025/Final Image.jpg',
+            image:       'Media/EDP 2025/Final Image wide.png',
             description: 'IEEE Student Day UAE — Engineering Design Project 2025. No electronics allowed. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Wood frame + 3D-printed components designed in Fusion 360.',
             tags:        ['EDP 2025', 'Fusion 360', '3D Print', 'Mechanical'],
             link:        'projects/edp-2025.html'
@@ -54,7 +54,7 @@ const projects = {
             id:          'corexy-printer',
             title:       'Custom CoreXY 3D Printer',
             category:    '3D Design & Fabrication',
-            image:       'Media/Custom CoreXy/Main.png',
+            image:       'Media/Custom CoreXy/Main 2.jpg',
             description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific Components.',
             tags:        ['3D Printing', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
             link:        'projects/corexy.html'

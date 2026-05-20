@@ -458,9 +458,15 @@ main {
     grid-column: span 2;
 }
 
-/* Card 4: wide bottom-right — pinned so cards 5+6 auto-fill the left */
+/* Card 4: wide bottom-right — pinned so cards 5+6 auto-fill left */
 .projects-bento .project-card:nth-child(4) {
     grid-column: 3 / span 2;
+}
+
+/* Wide cards span 2 cols — use 5:3 so image height matches the 4:5 narrow cards */
+.projects-bento .project-card:nth-child(1) .project-image-wrapper,
+.projects-bento .project-card:nth-child(4) .project-image-wrapper {
+    aspect-ratio: 5/3;
 }
 
 /* Tablet */
@@ -496,6 +502,7 @@ main {
 .project-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     background: var(--surface);
     border: 1px solid var(--border);
     border-top: 3px solid var(--border);
@@ -518,20 +525,20 @@ main {
     overflow: hidden;
     background: linear-gradient(135deg, #141414, #1e1e1e);
     position: relative;
-    min-height: 120px; /* fallback height when card has no image */
+    flex: 1;
+    min-height: 120px;
 }
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    filter: grayscale(15%) brightness(0.9);
-    transition: transform 0.4s ease, filter 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image {
     transform: scale(1.04);
-    filter: grayscale(0%) brightness(1);
 }
 
 
@@ -540,7 +547,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex: 1;
 }
 
 .project-category {
@@ -565,7 +571,6 @@ main {
     font-size: 0.82rem;
     line-height: 1.65;
     color: var(--muted);
-    flex: 1;
     margin-top: 0.2rem;
 }
 
