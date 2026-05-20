@@ -13,8 +13,8 @@
     --accent-dim:  rgba(255, 85, 0, 0.10);
     --white:       #ffffff;
     --text:        #c0c0c0;
-    --muted:       #666666;
-    --dim:         #333333;
+    --muted:       #817f7f;
+    --dim:         #7c7b7b;
     --mono:        'Courier New', Courier, monospace;
     --nav-h:       68px;
 }
@@ -534,21 +534,6 @@ main {
     filter: grayscale(0%) brightness(1);
 }
 
-/* If no image loaded, show a label */
-.project-image-wrapper::after {
-    content: attr(data-label);
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    color: var(--dim);
-    text-transform: uppercase;
-    pointer-events: none;
-}
 
 .project-content {
     padding: 1.4rem 1.5rem 1.6rem;
@@ -594,7 +579,7 @@ main {
 
 .project-tag {
     font-family: var(--mono);
-    font-size: 0.56rem;
+    font-size: 0.65rem;
     letter-spacing: 0.1em;
     color: var(--dim);
     border: 1px solid var(--border-mid);
@@ -1080,9 +1065,9 @@ main {
 
 .img-cell-caption {
     font-family: var(--mono);
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: #888888;
     text-transform: uppercase;
     padding: 0.5rem 0.8rem;
     border-top: 1px solid var(--border);

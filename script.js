@@ -239,7 +239,6 @@ function renderProjects(containerId, projectsArray) {
                 <div class="project-content">
                     <div class="project-category">${project.category}</div>
                     <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.description}</p>
                     ${tagsHtml}
                     <span class="project-link">VIEW PROJECT →</span>
                 </div>
