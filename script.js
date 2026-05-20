@@ -25,7 +25,7 @@ const projects = {
         },
         {
             id:          'cdp-2026',
-            title:       'Ball-Redirecting Goal Robot',
+            title:       'Ball-Redirecting Goal Robot [WIP]',
             category:    'Robotics & Embedded',
             image:       'Media/CDP 2026/Main Image - current state.jpg',
             description: 'IEEE CDP 2026 — A stepper motor rotates a panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
@@ -44,7 +44,7 @@ const projects = {
         {
             id:          'edp-2025',
             title:       'Precision Catapult — 2nd Place',
-            category:    'Robotics & Embedded',
+            category:    '3D Design & Fabrication',
             image:       'Media/EDP 2025/Final Image.jpg',
             description: 'IEEE Student Day UAE — Engineering Design Project 2025. No electronics allowed. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Wood frame + 3D-printed components designed in Fusion 360.',
             tags:        ['EDP 2025', 'Fusion 360', '3D Print', 'Mechanical'],
@@ -92,7 +92,7 @@ const projects = {
         },
         {
             id:          'cdp-2026',
-            title:       'Ball-Redirecting Goal Robot',
+            title:       'Ball-Redirecting Goal Robot [WIP]',
             category:    'Robotics & Embedded',
             image:       'Media/CDP 2026/Main Image - current state.jpg',
             description: 'IEEE CDP 2026 — A stepper motor rotates a deflector panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
@@ -107,15 +107,6 @@ const projects = {
             description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 4B, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
             tags:        ['Raspberry Pi', 'OpenCV', 'PID Control', 'Custom Sensors'],
             link:        'projects/cdp-2025.html'
-        },
-        {
-            id:          'edp-2025',
-            title:       'Precision Catapult — 2nd Place',
-            category:    'Robotics & Embedded',
-            image:       'Media/EDP 2025/Final Image.jpg',
-            description: 'IEEE Student Day UAE — EDP 2025. No-electronics mechanical catapult. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Designed in Fusion 360, printed and assembled.',
-            tags:        ['EDP 2025', '2nd Place', 'Fusion 360', '3D Print'],
-            link:        'projects/edp-2025.html'
         },
         {
             id:          'dewa-pipeline',
@@ -147,6 +138,15 @@ const projects = {
             description: 'Built from salvaged parts on a community CoreXY frame design. Several mechanical components re-designed from scratch to match specific Components.',
             tags:        ['3D Printing', 'Fusion 360', 'Mechanical Design', 'Salvaged Parts'],
             link:        'projects/corexy.html'
+        },
+        {
+            id:          'edp-2025',
+            title:       'Precision Catapult — 2nd Place',
+            category:    '3D Design & Fabrication',
+            image:       'Media/EDP 2025/Final Image.jpg',
+            description: 'IEEE Student Day UAE — EDP 2025. No-electronics mechanical catapult. Adjustable arm stop for range control, dual-profile ball holder for two projectile sizes. Designed in Fusion 360, printed and assembled.',
+            tags:        ['EDP 2025', '2nd Place', 'Fusion 360', '3D Print'],
+            link:        'projects/edp-2025.html'
         },
         {
             id:          'bt-speaker',
@@ -239,6 +239,7 @@ function renderProjects(containerId, projectsArray) {
                 <div class="project-content">
                     <div class="project-category">${project.category}</div>
                     <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
                     ${tagsHtml}
                     <span class="project-link">VIEW PROJECT →</span>
                 </div>

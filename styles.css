@@ -230,7 +230,7 @@ p {
 
 .mono-tag {
     font-family: var(--mono);
-    font-size: 0.68rem;
+    font-size: 0.85rem;
     letter-spacing: 0.2em;
     color: var(--muted);
     text-transform: uppercase;
@@ -293,7 +293,7 @@ p {
 
 .meta-list { display: flex; flex-direction: column; gap: 0.25rem; }
 .meta-list li {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: var(--text);
     padding-left: 1.1rem;
     position: relative;
@@ -315,7 +315,7 @@ p {
     border: 1px solid var(--border-mid);
     padding: 0.55rem 0.85rem;
     font-family: var(--mono);
-    font-size: 0.62rem;
+    font-size: 0.85rem;
     letter-spacing: 0.14em;
     color: var(--muted);
     text-transform: uppercase;
@@ -443,36 +443,35 @@ main {
     gap: 1.5rem;
 }
 
-/* BENTO — 3-column layout */
+/* BENTO — 4-column layout */
 .projects-bento {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Card 1: 2 cols wide, 2 rows tall */
+/* Card 1: wide top-left */
 .projects-bento .project-card:nth-child(1) {
     grid-column: span 2;
-    grid-row: span 2;
 }
 
-/* bento card 1: no forced aspect-ratio — image defines height naturally */
-
-/* Card 4: 2 cols wide */
+/* Card 4: wide bottom-right — pinned so cards 5+6 auto-fill the left */
 .projects-bento .project-card:nth-child(4) {
-    grid-column: span 2;
+    grid-column: 3 / span 2;
 }
 
 /* Tablet */
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     .projects-bento {
         grid-template-columns: repeat(2, 1fr);
     }
     .projects-bento .project-card:nth-child(1) {
         grid-column: span 2;
-        grid-row: span 1;
     }
     .projects-bento .project-card:nth-child(4) {
-        grid-column: span 1;
+        grid-column: span 2;
     }
 }
 
@@ -902,7 +901,7 @@ main {
 
 .hero-img-panel img {
     width: 100%;
-    height: 520px;
+    height: 700px;
     object-fit: cover;
     object-position: center;
     display: block;
