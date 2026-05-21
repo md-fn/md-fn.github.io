@@ -68,15 +68,7 @@ const projects = {
             tags:        ['Fusion 360', 'Industrial Design', '3d Printing'],
             link:        'projects/3d-designs.html#speaker'
         },
-        {
-            id:          'bird-table',
-            title:       'Bird Table — Wood &amp; 3D Print',
-            category:    '3D Design & Fabrication',
-            image:       'Media/3d printign and wood - bird table/IMG_250220_225927.jpg',
-            description: 'Hybrid wood-and-3D-print garden bird table. Structural frame is wood; connector brackets, roof trim, and feed tray mounts are all PETG-printed parts designed in Fusion 360 to fit the timber dimensions exactly.',
-            tags:        ['Fusion 360', '3d Printing', 'Wood', 'Hybrid Build'],
-            link:        'projects/3d-designs.html#bird-table'
-        }
+        
     ],
 
     // ---- ROBOTICS & EMBEDDED --------------------------------
