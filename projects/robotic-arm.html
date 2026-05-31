@@ -29,6 +29,13 @@
 
     <!-- HEADER -->
     <header class="detail-header">
+        <div class="detail-team">
+            <span class="detail-team-label">TEAM</span>
+            <div class="detail-team-members">
+                <span class="detail-team-member">Ahmed Alali</span>
+                <span class="detail-team-member">Abdirazaq Ahmed</span>
+            </div>
+        </div>
         <span class="detail-eyebrow">Robotics &amp; Embedded · 2026</span>
         <h1 class="detail-title">Color-Sorting<br>Robotic Arm</h1>
         <div class="detail-meta">
@@ -125,15 +132,15 @@
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Joint Bearings</span>
-                    <span class="spec-value">Single-flange bearings at each pivot. One bearing per joint keeps the design compact while giving smooth, stable rotation with no rattle.</span>
+                    <span class="spec-value">Single-flange bearings at each pivot. One bearing per joint keeps the design compact and low cost while giving smooth, stable rotation with no rattle.</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">4-Bar Linkages</span>
-                    <span class="spec-value">Parallel 4-bar system passively keeps the end-effector horizontal at any arm angle — eliminates the need for a powered wrist DOF.</span>
+                    <span class="spec-value">Parallel 4-bar system passively keeps the gripper horizontal at all positions  eliminates the need for a separate wrist DOF.</span>
                 </div>
                 <div class="spec-item">
                     <span class="spec-label">Gripper</span>
-                    <span class="spec-value">Parallel servo gripper — both fingers move symmetrically, keeping the gripped object centred on the wrist axis regardless of grip force.</span>
+                    <span class="spec-value">Parallel servo gripper both jaws move symmetrically, keeping the gripped object centred on the wrist axis regardless of grip force.</span>
                 </div>
             </div>
 
@@ -144,8 +151,8 @@
                     <div class="img-cell-caption">CAD — front isometric, 4-bar linkage and elbow joint</div>
                 </div>
                 <div class="img-cell img-cell-lg">
-                    <img src="../Media/Robotic Arm/Cad arm.jpg" alt="CAD extended position">
-                    <div class="img-cell-caption">CAD — extended reach position</div>
+                    <img src="../Media/Robotic Arm/CAd arm backview different ratio.jpg" alt="CAD extended position">
+                    <div class="img-cell-caption">CAD — Back view, different position</div>
                 </div>
             </div>
 
@@ -153,7 +160,7 @@
             <div class="img-grid img-grid-2">
                 <div class="img-cell img-cell-sq">
                     <img src="../Media/Robotic Arm/wireframe sideview.jpg" alt="Wireframe side view">
-                    <div class="img-cell-caption">Wireframe — side view, herringbone base gear detail</div>
+                    <div class="img-cell-caption">Wireframe — side view</div>
                 </div>
                 <div class="img-cell img-cell-sq">
                     <img src="../Media/Robotic Arm/Wireframe alternate view.jpg" alt="Wireframe 3/4 view">
@@ -163,7 +170,7 @@
 
             <!-- Gripper CAD + gear photo -->
             <div class="img-grid img-grid-2">
-                <div class="img-cell img-cell-lg">
+                <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Cad gripper closeup.jpg" alt="Gripper CAD closeup">
                     <div class="img-cell-caption">CAD — parallel gripper, servo mount, and linkage pivot</div>
                 </div>
@@ -177,7 +184,9 @@
         <!-- ── ELECTRONICS & FIRMWARE ──────────────────────────── -->
         <div class="detail-section">
             <h2>Electronics &amp; Firmware</h2>
-            <p>The PIC18 runs firmware written in C (MicroC for PIC). Each 28BYJ-48 is driven by a ULN2003 driver. The TCS3200 sits at the front and outputs RGB as frequency ratios; the firmware classifies this data to determine the color of the cube a one-time calibration step.</p>
+            <p>The PIC18 runs firmware written in C (MicroC for PIC). Each 28BYJ-48 is driven by a ULN2003 driver.
+                 The TCS3200 sits at the front and outputs RGB as frequency ratios; 
+                 the firmware classifies this data to determine the color of the cube which is pre calibrated along with the different positions of the arm.</p>
             <p>Control is a pure sequential state machine: home → move to pick → grip → lift and scan → move to bin → release → home. An LCD shows the current state so you can follow the logic in real time.</p>
 
             <div class="img-grid img-grid-2">
@@ -238,11 +247,11 @@
             <div class="img-grid img-grid-2">
                 <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Joint 2.jpg" alt="Elbow joint closeup">
-                    <div class="img-cell-caption">Elbow — 4-bar pivot with single flange bearing s</div>
+                    <div class="img-cell-caption">Secondary arm joints</div>
                 </div>
                 <div class="img-cell img-cell-tall">
                     <img src="../Media/Robotic Arm/Joints1.jpg" alt="Shoulder joint">
-                    <div class="img-cell-caption">Shoulder joint assembly — bearing seat and stepper mount</div>
+                    <div class="img-cell-caption">Bearing joints </div>
                 </div>
             </div>
 

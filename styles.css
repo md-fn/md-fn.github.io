@@ -230,7 +230,7 @@ p {
 
 .mono-tag {
     font-family: var(--mono);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 0.2em;
     color: var(--muted);
     text-transform: uppercase;
@@ -284,7 +284,7 @@ p {
 .meta-label {
     display: block;
     font-family: var(--mono);
-    font-size: 0.6rem;
+    font-size: 1rem;
     letter-spacing: 0.22em;
     color: var(--accent);
     text-transform: uppercase;
@@ -293,7 +293,7 @@ p {
 
 .meta-list { display: flex; flex-direction: column; gap: 0.25rem; }
 .meta-list li {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--text);
     padding-left: 1.1rem;
     position: relative;
@@ -351,7 +351,7 @@ p {
 
 .skill-tag {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.88rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1em;
     color: var(--dim);
     display: flex;
@@ -361,7 +361,7 @@ p {
 
 .skill-num {
     font-family: var(--mono);
-    font-size: 0.58rem;
+    font-size: 0.9rem;
     color: var(--accent);
 }
 
@@ -765,6 +765,43 @@ main {
     margin: 0 auto;
     padding: 1rem 2rem 2.5rem;
     border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.detail-team {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    text-align: right;
+}
+
+.detail-team-label {
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.detail-team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-team-member {
+    font-size: 0.82rem;
+    color: var(--text);
+}
+
+@media (max-width: 640px) {
+    .detail-team {
+        position: static;
+        text-align: left;
+        margin-top: 1.5rem;
+    }
 }
 
 .detail-eyebrow {
