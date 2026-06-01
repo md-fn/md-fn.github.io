@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Printed Monitor Arm — MD FN Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-block">MD FN<span class="logo-dot">.</span></div>
+            <div class="nav-menu" style="display:flex;">
+                <a href="../index.html#home"     class="nav-item">HOME</a>
+                <a href="../index.html#robotics" class="nav-item">ROBOTICS</a>
+                <a href="../index.html#design"   class="nav-item">DESIGN</a>
+                <a href="../index.html#about"    class="nav-item">ABOUT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BACK -->
+    <div class="detail-nav">
+        <a href="../index.html#design" class="back-button">3D DESIGN &amp; FABRICATION</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="detail-header">
+        <span class="detail-eyebrow">3D Design &amp; Fabrication · Early Build</span>
+        <h1 class="detail-title">Monitor<br>Arm</h1>
+        <!-- <div class="detail-meta">
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">MATERIAL</span>
+                <span class="detail-meta-value">PLA </span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">COLUMN</span>
+                <span class="detail-meta-value">Salvaged aluminium curtain rod</span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">CAD</span>
+                <span class="detail-meta-value">Autodesk Fusion </span>
+            </div>
+            <div class="detail-meta-item">
+                <span class="detail-meta-label">STATUS</span>
+                <span class="detail-meta-value">Still in use — 2–3 years on</span>
+            </div>
+        </div> -->
+    </header>
+
+    <main class="detail-content">
+
+        <!-- ── HERO ───────────────────────────────────────────── -->
+        <div class="hero-images">
+            <div class="hero-img-panel">
+                <img src="../Media/Monitor Arm/mounting mechanism .jpg" alt="Monitor arm assembly" style="height: auto; aspect-ratio: 3/2;">
+                <span class="hero-img-label">ASSEMBLED</span>
+            </div>
+            <div class="hero-img-panel">
+                <img src="../Media/Monitor Arm/Side - base attachment.jpg" alt="Base attachment side view" style="height: auto; aspect-ratio: 3/2;">
+                <span class="hero-img-label">BASE ATTACHMENT — SIDE</span>
+            </div>
+        </div>
+
+        <!-- ── OVERVIEW ────────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Overview</h2>
+            <p> My monitor was taking up too much space in my desk and had no adjustability, I wanted somethign sleek and minimal, that could could go higher and had basic adjustability while taking almost no desk space.I wanted to make it mostly usign parts I had laying around.
+                This was one of my earlier 3D printing projects, I learned a lot from it by makign many mistakes along the way</p>
+            <p>It slides up and down the rod, rotates, and tilts. The 4-bar linkage is set up so the centre of rotation sits close to the monitor's centre of mass, which means once you adjust the tilt, it stays where you put it without counterweights. Vertical position and Z-axis rotation lock with a simple friction mechanism, and tilt comes naturally from the 4-bar geometry.</p>
+            <p>My monitor has been mounted on this arm for 2-3 years now. I printed in PLA.Not the best about that choice but it hasn't failed so can't really complain.</p>
+        </div>
+
+        <!-- ── MECHANISM ──────────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Mechanism</h2>
+            <p>The whole arm pivots through a 4-bar linkage. By placing the virtual pivot point close to the monitor's centre of mass, the arm holds any position passively wohtout any counterwights or large clamp force. Tilt follows from the linkage geometry rather than a separate joint.</p>
+            <p>Locking is straightforward: a straight bar sits inside the moving upper section, touching the aluminium rod. Two screw knobs on the outside clamp inward, pressing that bar against the rod which locks vertical position and Z-axis rotation at the same time. Tilt is the only axis left free after that, handled by the 4-bar.</p>
+            <p>I also designed a few small clips to snap around the rod and route the monitor cable along it. Nothing complicated, just keeps things tidy.</p>
+
+            <div class="img-grid img-grid-2" style="margin-top:2rem;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/4 bar mechanism cad anim.gif" alt="4-bar linkage CAD animation">
+                    <div class="img-cell-caption">4-bar linkage — Fusion 360 joint animation</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/monitor attachment and mechanism cad.png" alt="Monitor attachment CAD">
+                    <div class="img-cell-caption">Monitor attachment and linkage — CAD</div>
+                </div>
+            </div>
+
+            <div style="max-width:600px; margin:2rem auto 0;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/vertical position locking mechanism.png" alt="Locking mechanism">
+                    <div class="img-cell-caption">Vertical lock — two screw knobs press bar against rod</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PRINTING TECHNIQUES ────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Printing Tricks</h2>
+            <p>One of the first projects where I actually used some proper slicer and CAD features rather than just printing and hoping for the best.</p>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Pause-and-insert nuts</span>
+                    <span class="spec-value">Printer pauses at the right layer, you drop hex nuts into the recesses, then resume. Far stronger than threading into plastic or heat-pressing. Used throughout for all the attachment screw points.</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Infill modifiers</span>
+                    <span class="spec-value">Designed custom modifier volumes in Fusion 360 and imported them into the slicer. The monitor attachment part needed to be solid around all screw holes and the linkage joint so those areas got 100% concentric infill. Everywhere else normal density was fine. Thus balancing material usage and strength.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── BASE ATTACHMENT ────────────────────────────────── -->
+        <div class="detail-section">
+            <h2>Base Attachment</h2>
+            <p>Simple part that screws together and slides into the desk edge. The design itself works but I measured wrong. The table thickness turned out thinner than I measured, so the clamp was loose and I had to shim it with papers to get it to sit tightly.</p>
+            <p>If I redid this I'd make the attachment adjustable, so it can accommodate different table thicknesses.</p>
+
+            <div class="img-grid img-grid-2" style="margin-top:2rem;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/base cad.png" alt="Base clamp CAD">
+                    <div class="img-cell-caption">Base clamp — Fusion 360</div>
+                </div>
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/base front.jpg" alt="Base front">
+                    <div class="img-cell-caption">Base — front view</div>
+                </div>
+            </div>
+
+            <div style="max-width:480px; margin:0 auto;">
+                <div class="img-cell img-cell-lg">
+                    <img src="../Media/Monitor Arm/back - base attaching to table .jpg" alt="Base attached to table">
+                    <div class="img-cell-caption">Attached to table — shimmed to fit</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-name">MOHAMMED FAIHAN</div>
+            <div class="footer-links">
+                <a href="https://github.com/md-fn" class="footer-link" target="_blank" rel="noopener">GITHUB</a>
+                <a href="https://www.linkedin.com/in/mohammedfaihan/" class="footer-link">LINKEDIN</a>
+                <a href="mailto:mohammedfaihankhateeb@gmail.com" class="footer-link">EMAIL</a>
+            </div>
+            <p class="footer-copy">© 2025 · Computer Engineering · Ajman University</p>
+        </div>
+    </footer>
+
+</body>
+</html>

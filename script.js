@@ -17,7 +17,7 @@ const projects = {
         {
             id:          'robotic-arm',
             title:       'Color-Sorting Robotic Arm',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/Robotic Arm/Arm 1.jpg',
             description: 'Fully designed in Fusion 360. 4-bar linkages keep the end-effector level, herringbone 2:1 gear at the base, parallel servo gripper, single-flange bearings for smooth low-backlash joints. PIC18 + TCS3200 color sensor drives automated color sorting.',
             tags:        ['Fusion 360', 'PIC18', '28BYJ-48', '3D Print', 'TCS3200'],
@@ -26,7 +26,7 @@ const projects = {
         {
             id:          'cdp-2026',
             title:       'Ball-Redirecting Goal Robot [WIP]',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/CDP 2026/Main Image - current state.jpg',
             description: 'IEEE CDP 2026 — A stepper motor rotates a panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
             tags:        ['RPi 4B', 'OpenCV', 'Stepper', 'TMC2209', 'Arduino Nano'],
@@ -35,7 +35,7 @@ const projects = {
         {
             id:          'cdp-2025',
             title:       'Line-Following Robot',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/CDP 2025/Robot Main.jpg',
             description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 5, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
             tags:        ['Raspberry Pi', 'OpenCV', 'PID', 'Custom Sensors'],
@@ -68,7 +68,24 @@ const projects = {
             tags:        ['Fusion 360', 'Industrial Design', '3d Printing'],
             link:        'projects/3d-designs.html#speaker'
         },
-        
+        {
+            id:          'monitor-arm',
+            title:       '3D-Printed Monitor Arm',
+            category:    '3D Design & Fabrication',
+            image:       'Media/Monitor Arm/mounting mechanism .jpg',
+            description: 'Built around a salvaged aluminium curtain rod. 4-bar linkage puts the virtual pivot near the monitor\'s centre of mass so it holds position without counterweights. First project using infill modifiers and pause-to-insert nuts.',
+            tags:        ['Fusion 360', '4-bar Linkage', '3d Printing', 'Infill Modifiers'],
+            link:        'projects/monitor-arm.html'
+        },
+        {
+            id:          'dewa-pipeline',
+            title:       'Pipeline Monitoring AI Robot',
+            category:    'Robotics & Electronics',
+            image:       'Media/Pipeline monitoring robot/whole robot.png',
+            description: '1st Place — DEWA AI Competition (Grade 12). Autonomous pipeline inspection robot with AI-driven anomaly detection and real-time reporting.',
+            tags:        ['AI', 'Autonomous', 'Robotics', 'Competition'],
+            link:        'projects/dewa-pipeline.html'
+        }
     ],
 
     // ---- ROBOTICS & EMBEDDED --------------------------------
@@ -76,7 +93,7 @@ const projects = {
         {
             id:          'robotic-arm',
             title:       'Color-Sorting Robotic Arm',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/Robotic Arm/Arm 2.jpg',
             description: 'Fully designed in Fusion 360. 4-bar linkages keep the end-effector level, herringbone 2:1 gear at the base, parallel servo gripper, single-flange bearings for smooth low-backlash joints. PIC18 + TCS3200 color sensor drives automated color sorting.',
             tags:        ['Fusion 360', 'PIC18', '28BYJ-48', 'ULN2003', 'TCS3200'],
@@ -85,7 +102,7 @@ const projects = {
         {
             id:          'cdp-2026',
             title:       'Ball-Redirecting Goal Robot [WIP]',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/CDP 2026/Main Image - current state.jpg',
             description: 'IEEE CDP 2026 — A stepper motor rotates a deflector panel to redirect a tennis ball into the correct goal. Webcam + Raspberry Pi 4B for real-time trajectory calculation. Mechanical system complete; electronics WIP.',
             tags:        ['RPi 4B', 'OpenCV', 'Stepper Motor', 'TMC2209', 'Arduino Nano'],
@@ -94,7 +111,7 @@ const projects = {
         {
             id:          'cdp-2025',
             title:       'Line-Following Robot',
-            category:    'Robotics & Embedded',
+            category:    'Robotics & Electronics',
             image:       'Media/CDP 2025/Robot Main.jpg',
             description: 'IEEE CDP 2025 internal competition. Custom 5-LDR analog line sensor array with PID, Raspberry Pi 4B, servo-driven parallel gripper, 3D-printed camera mount, and a custom RPi enclosure with aluminium heatsink.',
             tags:        ['Raspberry Pi', 'OpenCV', 'PID Control', 'Custom Sensors'],
@@ -103,9 +120,9 @@ const projects = {
         {
             id:          'dewa-pipeline',
             title:       'Pipeline Monitoring AI Robot',
-            category:    'Robotics & Embedded',
-            image:       '',
-            description: '1st Place — DEWA AI Competition (Grade 12). Autonomous pipeline inspection robot with AI-driven anomaly detection and real-time reporting.',
+            category:    'Robotics & Electronics',
+            image:       'Media/Pipeline monitoring robot/whole robot.png',
+            description: 'Winning Team — DEWA AI Championship 2022 (Grade 12). Autonomous pipeline inspection robot with AI-driven crack detection and real-time reporting.',
             tags:        ['AI', 'Autonomous', 'Robotics', 'Competition'],
             link:        'projects/dewa-pipeline.html'
         }
@@ -153,10 +170,10 @@ const projects = {
             id:          'monitor-arm',
             title:       '3D-Printed Monitor Arm',
             category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Slides up/down an aluminium tube, rotates, and tilts via a 4-bar linkage that keeps the centre of rotation near the tube — so it stays in position without counterweights.',
-            tags:        ['Fusion 360', '4-bar Linkage', '3d Printing'],
-            link:        'projects/3d-designs.html#monitor-arm'
+            image:       'Media/Monitor Arm/mounting mechanism .jpg',
+            description: 'Built around a salvaged aluminium curtain rod. 4-bar linkage puts the virtual pivot near the monitor\'s centre of mass so it holds position without counterweights. Friction lock for vertical + rotation.',
+            tags:        ['Fusion 360', '4-bar Linkage', '3d Printing', 'Infill Modifiers'],
+            link:        'projects/monitor-arm.html'
         },
         {
             id:          'bird-table',
@@ -224,7 +241,7 @@ function renderProjects(containerId, projectsArray) {
             : '';
 
         return `
-            <a href="${project.link}" class="project-card">
+            <a href="${project.link}" class="project-card" data-id="${project.id}">
                 <div class="project-image-wrapper" data-label="${project.title}">
                     ${imgHtml}
                 </div>
