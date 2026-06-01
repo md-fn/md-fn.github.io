@@ -188,10 +188,10 @@ const projects = {
             id:          'rc-car-body',
             title:       '1/5 Scale RC Car Body',
             category:    '3D Design & Fabrication',
-            image:       '',
-            description: 'Sleek, aerodynamic 1/5-scale RC car body designed in Fusion 360 and 3D-printed. Also designed sand capable wheels witha hard shell and a tread pattern suited to desert terrain.',
-            tags:        ['Fusion 360', 'Automotive Design', '3d Printing', 'RC'],
-            link:        'projects/3d-designs.html'
+            image:       'Media/Rc car body/body fitteed top view.jpeg',
+            description: '1/5 scale RC car body shell designed in Fusion 360 using the Form tools for organic surfacing. Split into two halves to fit the printer, plastic-welded and seam-filled with UV resin. Printed in PETG.',
+            tags:        ['Fusion 360', 'Form Tools', 'PETG', 'RC', 'Surfacing'],
+            link:        'projects/3d-designs.html#rc-car'
         },
         {
             id:          'camera-slider',
