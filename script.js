@@ -82,7 +82,7 @@ const projects = {
             title:       'Pipeline Monitoring AI Robot',
             category:    'Robotics & Electronics',
             image:       'Media/Pipeline monitoring robot/whole robot.png',
-            description: '1st Place — DEWA AI Competition (Grade 12). Autonomous pipeline inspection robot with AI-driven anomaly detection and real-time reporting.',
+            description: 'Winning Team — DEWA AI Championship 2022 (Grade 12). Autonomous pipeline inspection robot with AI-driven crack detection and real-time reporting.',
             tags:        ['AI', 'Autonomous', 'Robotics', 'Competition'],
             link:        'projects/dewa-pipeline.html'
         }
